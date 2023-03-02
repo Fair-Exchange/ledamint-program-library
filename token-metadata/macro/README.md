@@ -1,0 +1,1 @@
+A macro file for creating instruction builders on vanilla Safecoin programs to be used by shank and solita.
