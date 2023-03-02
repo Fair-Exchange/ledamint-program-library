@@ -1,4 +1,4 @@
-use mpl_token_auth_rules::payload::Payload;
+use lpl_token_auth_rules::payload::Payload;
 use rooster::{
     instruction::{
         delegate as rooster_delegate, delegate_transfer, init, withdraw, DelegateTransferArgs,

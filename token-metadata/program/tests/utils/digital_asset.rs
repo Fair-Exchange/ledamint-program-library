@@ -403,7 +403,7 @@ impl DigitalAsset {
         }) = metadata.programmable_config
         {
             builder.authorization_rules(rule_set);
-            builder.authorization_rules_program(mpl_token_auth_rules::ID);
+            builder.authorization_rules_program(lpl_token_auth_rules::ID);
         }
 
         let compute_ix = ComputeBudgetInstruction::set_compute_unit_limit(400_000);
@@ -670,7 +670,7 @@ impl DigitalAsset {
 
         if let Some(authorization_rules) = authorization_rules {
             builder.authorization_rules(authorization_rules);
-            builder.authorization_rules_program(mpl_token_auth_rules::ID);
+            builder.authorization_rules_program(lpl_token_auth_rules::ID);
         }
 
         let transfer_ix = builder.build(args).unwrap().instruction();

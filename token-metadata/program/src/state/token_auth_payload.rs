@@ -1,7 +1,7 @@
 /// These types exist to give Shank a way to create the Payload type as it
-/// cannnot create it from the remote type from mpl-token-auth-rules.
+/// cannnot create it from the remote type from lpl-token-auth-rules.
 /// Care will need to be taken to ensure they stay synced with any changes in
-/// mpl-token-auth-rules.
+/// lpl-token-auth-rules.
 use std::collections::HashMap;
 
 use borsh::{BorshDeserialize, BorshSerialize};

@@ -1,5 +1,5 @@
-use mpl_token_auth_rules::utils::assert_owned_by;
-use mpl_utils::{assert_signer, create_or_allocate_account_raw};
+use lpl_token_auth_rules::utils::assert_owned_by;
+use lpl_utils::{assert_signer, create_or_allocate_account_raw};
 use safecoin_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, program_error::ProgramError,
     program_option::COption, pubkey, pubkey::Pubkey, system_program, sysvar,
@@ -78,7 +78,7 @@ pub fn migrate_v1(program_id: &Pubkey, ctx: Context<Migrate>, args: MigrateArgs)
         return Err(ProgramError::IncorrectProgramId);
     }
     if let Some(auth_rules_program) = ctx.accounts.authorization_rules_program_info {
-        if auth_rules_program.key != &mpl_token_auth_rules::ID {
+        if auth_rules_program.key != &lpl_token_auth_rules::ID {
             return Err(ProgramError::IncorrectProgramId);
         }
     }

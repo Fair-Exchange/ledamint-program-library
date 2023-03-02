@@ -66,7 +66,7 @@ import {
   CreateOrUpdateInstructionArgs,
   createCreateOrUpdateInstruction,
   PROGRAM_ID as TOKEN_AUTH_RULES_ID,
-} from '@metaplex-foundation/mpl-token-auth-rules';
+} from '@metaplex-foundation/lpl-token-auth-rules';
 import {
   ACCOUNT_SIZE,
   createInitializeAccountInstruction,

@@ -16,7 +16,7 @@ import { BN } from 'bn.js';
 import { getAccount } from '@safecoin/safe-token';
 import { PublicKey } from '@safecoin/web3.js';
 import { findTokenRecordPda } from './utils/programmable';
-import { PROGRAM_ID as TOKEN_AUTH_RULES_ID } from '@metaplex-foundation/mpl-token-auth-rules';
+import { PROGRAM_ID as TOKEN_AUTH_RULES_ID } from '@metaplex-foundation/lpl-token-auth-rules';
 import { encode } from '@msgpack/msgpack';
 
 killStuckProcess();

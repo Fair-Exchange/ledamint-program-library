@@ -1,8 +1,8 @@
-use mpl_token_auth_rules::{
+use lpl_token_auth_rules::{
     instruction::{builders::ValidateBuilder, InstructionBuilder, ValidateArgs},
     payload::PayloadType,
 };
-use mpl_utils::{create_or_allocate_account_raw, token::TokenTransferParams};
+use lpl_utils::{create_or_allocate_account_raw, token::TokenTransferParams};
 use safecoin_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, msg, program::invoke_signed,
     program_error::ProgramError, pubkey::Pubkey,
@@ -321,7 +321,7 @@ pub fn frozen_transfer<'a, 'b>(
     let dest_info = params.destination.clone();
     let token_program_info = params.token_program.clone();
 
-    mpl_utils::token::safe_token_transfer(params).unwrap();
+    lpl_utils::token::safe_token_transfer(params).unwrap();
 
     freeze(
         mint_info,

@@ -28,7 +28,7 @@ pub use escrow::*;
 pub use master_edition::*;
 pub use metadata::*;
 pub use migrate::*;
-use mpl_utils::resize_or_reallocate_account_raw;
+use lpl_utils::resize_or_reallocate_account_raw;
 use num_derive::FromPrimitive;
 use num_traits::FromPrimitive;
 pub use programmable::*;

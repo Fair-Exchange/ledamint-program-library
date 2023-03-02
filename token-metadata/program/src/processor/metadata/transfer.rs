@@ -1,7 +1,7 @@
 use std::fmt::Display;
 
-use mpl_token_auth_rules::processor::cmp_pubkeys;
-use mpl_utils::{assert_signer, token::TokenTransferParams};
+use lpl_token_auth_rules::processor::cmp_pubkeys;
+use lpl_utils::{assert_signer, token::TokenTransferParams};
 use safecoin_program::{
     account_info::AccountInfo,
     entrypoint::ProgramResult,
@@ -111,7 +111,7 @@ fn transfer_v1(program_id: &Pubkey, ctx: Context<Transfer>, args: TransferArgs) 
         assert_owned_by(master_edition, program_id)?;
     }
     if let Some(authorization_rules) = ctx.accounts.authorization_rules_info {
-        assert_owned_by(authorization_rules, &mpl_token_auth_rules::ID)?;
+        assert_owned_by(authorization_rules, &lpl_token_auth_rules::ID)?;
     }
 
     // Check if the destination exists.
@@ -171,7 +171,7 @@ fn transfer_v1(program_id: &Pubkey, ctx: Context<Transfer>, args: TransferArgs) 
     }
 
     if let Some(auth_rules_program) = ctx.accounts.authorization_rules_program_info {
-        if auth_rules_program.key != &mpl_token_auth_rules::ID {
+        if auth_rules_program.key != &lpl_token_auth_rules::ID {
             return Err(ProgramError::IncorrectProgramId);
         }
     }
@@ -406,7 +406,7 @@ fn transfer_v1(program_id: &Pubkey, ctx: Context<Transfer>, args: TransferArgs) 
                 )?;
             }
         }
-        _ => mpl_utils::token::safe_token_transfer(token_transfer_params).unwrap(),
+        _ => lpl_utils::token::safe_token_transfer(token_transfer_params).unwrap(),
     }
 
     Ok(())

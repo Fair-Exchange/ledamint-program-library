@@ -1,6 +1,6 @@
 use std::fmt::{Display, Formatter};
 
-use mpl_utils::assert_signer;
+use lpl_utils::assert_signer;
 use safecoin_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, msg, program_error::ProgramError,
     program_pack::Pack, pubkey::Pubkey, sysvar,
@@ -94,11 +94,11 @@ fn update_v1(program_id: &Pubkey, ctx: Context<Update>, args: UpdateArgs) -> Pro
         return Err(ProgramError::IncorrectProgramId);
     }
 
-    // If the current rule set is passed in, also require the mpl-token-auth-rules program
+    // If the current rule set is passed in, also require the lpl-token-auth-rules program
     // to be passed in.
     if ctx.accounts.authorization_rules_info.is_some() {
         if let Some(authorization_rules_program) = ctx.accounts.authorization_rules_program_info {
-            if authorization_rules_program.key != &mpl_token_auth_rules::ID {
+            if authorization_rules_program.key != &lpl_token_auth_rules::ID {
                 return Err(ProgramError::IncorrectProgramId);
             }
         } else {

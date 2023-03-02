@@ -6,8 +6,8 @@ Token Metadata
 * :package: NPM package: [v2.8.1](https://www.npmjs.com/package/@metaplex-foundation/lpl-token-metadata/v/2.8.1)
 
 Token Authorization Rules
-* :crab: Rust crate: [v1.1.0](https://crates.io/crates/mpl-token-auth-rules/1.1.0)
-* :package: NPM package: [v1.1.0](https://www.npmjs.com/package/@metaplex-foundation/mpl-token-auth-rules/v/1.1.0)
+* :crab: Rust crate: [v1.1.0](https://crates.io/crates/lpl-token-auth-rules/1.1.0)
+* :package: NPM package: [v1.1.0](https://www.npmjs.com/package/@metaplex-foundation/lpl-token-auth-rules/v/1.1.0)
 
 ## 📄  Technical Summary
 
@@ -391,14 +391,14 @@ There are **Primitive Rules** and **Composed Rules** that are created by combini
 - **Primitive Rules:** store any accounts or data needed for evaluation, and at runtime will produce a `true` or `false` output based on accounts and a well-defined `Payload` that are passed into the `validate()` function.
 - **Composed Rules:** return a `true` or `false` based on whether any or all of the primitive rules return `true`.  Composed rules can then be combined into higher-level composed rules that implement more complex boolean logic.  Because of the recursive definition of the `Rule` enum, calling `validate()` on a top-level composed rule will start at the top and validate at every level, down to the component primitive rules.
 
-More details of the Token Authorization Rules program, including examples, can be found [here](https://github.com/metaplex-foundation/mpl-token-auth-rules/blob/main/README.md).
+More details of the Token Authorization Rules program, including examples, can be found [here](https://github.com/metaplex-foundation/lpl-token-auth-rules/blob/main/README.md).
 
 ## 🎬  Local Setup for Testing
 
 The repository contains both Rust BPF and JavaScript/TypeScript. In order to setup the environment to run the tests, you will need to first clone the required repositories:
 
 * Token Metadata: `https://github.com/metaplex-foundation/metaplex-program-library.git` branch `master`
-* Token Authorization Rules: `https://github.com/metaplex-foundation/mpl-token-auth-rules.git`
+* Token Authorization Rules: `https://github.com/metaplex-foundation/lpl-token-auth-rules.git`
 * Rooster (for BPF tests): `https://github.com/metaplex-foundation/rooster`
 
 This guide will assume that these repositories were cloned into a folder `$PROJECTS`.
@@ -407,11 +407,11 @@ This guide will assume that these repositories were cloned into a folder `$PROJE
 
 To get Rust BPF tests working, you will first need to build both Token Auth Rules and Rooster programs:
 
-* In the folder `$PROJECTS/mpl-token-auth-rules/program` execute:
+* In the folder `$PROJECTS/lpl-token-auth-rules/program` execute:
   ```
   cargo build-bpf
   ```
-  Then, copy the generated `.so` file from `$PROJECTS/mpl-token-auth-rules/program/target/deploy` into `$PROJECTS/metaplex-program-library/token-metadata/target/deploy/`
+  Then, copy the generated `.so` file from `$PROJECTS/lpl-token-auth-rules/program/target/deploy` into `$PROJECTS/metaplex-program-library/token-metadata/target/deploy/`
   
 * In the folder `$PROJECTS/rooster/program` execute:
   ```
@@ -431,11 +431,11 @@ cargo test-bpf
 
 The JavaScript/TypeScript use [Amman](https://github.com/metaplex-foundation/amman) to start a local validatior. The first step required is to build the required programs:
 
-* In the folder `$PROJECTS/mpl-token-auth-rules/program` execute:
+* In the folder `$PROJECTS/lpl-token-auth-rules/program` execute:
   ```
   cargo build-bpf
   ```
-  Then, copy the generated `.so` file from `$PROJECTS/mpl-token-auth-rules/program/target/deploy` into `$PROJECTS/metaplex-program-library/test-programs/`
+  Then, copy the generated `.so` file from `$PROJECTS/lpl-token-auth-rules/program/target/deploy` into `$PROJECTS/metaplex-program-library/test-programs/`
   
 * In the folder `$PROJECTS/metaplex-program-library/` execute:
   ```

@@ -1,4 +1,4 @@
-use mpl_utils::cmp_pubkeys;
+use lpl_utils::cmp_pubkeys;
 use safecoin_program::{account_info::AccountInfo, pubkey, pubkey::Pubkey};
 
 pub const BUBBLEGUM_PROGRAM_ADDRESS: Pubkey =

@@ -1,4 +1,4 @@
-use mpl_token_auth_rules::{
+use lpl_token_auth_rules::{
     instruction::{builders::CreateOrUpdateBuilder, CreateOrUpdateArgs, InstructionBuilder},
     payload::Payload,
     state::{CompareOp, Rule, RuleSetV1},
@@ -18,7 +18,7 @@ use safecoin_sdk::{
 
 use crate::*;
 
-static PROGRAM_ALLOW_LIST: [Pubkey; 2] = [mpl_token_auth_rules::ID, rooster::ID];
+static PROGRAM_ALLOW_LIST: [Pubkey; 2] = [lpl_token_auth_rules::ID, rooster::ID];
 
 macro_rules! get_primitive_rules {
     (
@@ -63,7 +63,7 @@ pub async fn create_default_metaplex_rule_set(
 ) -> (Pubkey, AuthorizationData) {
     let name = String::from("Metaplex Royalty Enforcement");
     let (ruleset_addr, _ruleset_bump) =
-        mpl_token_auth_rules::pda::find_rule_set_address(creator.pubkey(), name.clone());
+        lpl_token_auth_rules::pda::find_rule_set_address(creator.pubkey(), name.clone());
 
     get_primitive_rules!(
         dest_program_allow_list,

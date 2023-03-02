@@ -11,7 +11,7 @@ use utils::*;
 
 mod delegate {
 
-    use mpl_token_auth_rules::error::RuleSetError;
+    use lpl_token_auth_rules::error::RuleSetError;
     use lpl_token_metadata::{
         error::MetadataError,
         instruction::{DelegateArgs, MetadataDelegateRole},
@@ -385,7 +385,7 @@ mod delegate {
     #[tokio::test]
     async fn store_rule_set_revision_on_delegate() {
         let mut program_test = ProgramTest::new("lpl_token_metadata", lpl_token_metadata::ID, None);
-        program_test.add_program("mpl_token_auth_rules", mpl_token_auth_rules::ID, None);
+        program_test.add_program("lpl_token_auth_rules", lpl_token_auth_rules::ID, None);
         program_test.set_compute_max_units(400_000);
         let mut context = program_test.start_with_context().await;
 
@@ -531,7 +531,7 @@ mod delegate {
     #[tokio::test]
     async fn delegate_not_in_allow_list() {
         let mut program_test = ProgramTest::new("lpl_token_metadata", lpl_token_metadata::ID, None);
-        program_test.add_program("mpl_token_auth_rules", mpl_token_auth_rules::ID, None);
+        program_test.add_program("lpl_token_auth_rules", lpl_token_auth_rules::ID, None);
         program_test.set_compute_max_units(400_000);
         let mut context = program_test.start_with_context().await;
 

@@ -1,4 +1,4 @@
-use mpl_utils::{assert_signer, cmp_pubkeys};
+use lpl_utils::{assert_signer, cmp_pubkeys};
 use safecoin_program::{
     account_info::AccountInfo,
     entrypoint::ProgramResult,

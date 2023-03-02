@@ -65,7 +65,7 @@ impl InstructionBuilder for super::builders::Lock {
 
         // Optional authorization rules accounts
         if let Some(rules) = &self.authorization_rules {
-            accounts.push(AccountMeta::new_readonly(mpl_token_auth_rules::ID, false));
+            accounts.push(AccountMeta::new_readonly(lpl_token_auth_rules::ID, false));
             accounts.push(AccountMeta::new_readonly(*rules, false));
         } else {
             accounts.push(AccountMeta::new_readonly(crate::ID, false));
@@ -121,7 +121,7 @@ impl InstructionBuilder for super::builders::Unlock {
 
         // Optional authorization rules accounts
         if let Some(rules) = &self.authorization_rules {
-            accounts.push(AccountMeta::new_readonly(mpl_token_auth_rules::ID, false));
+            accounts.push(AccountMeta::new_readonly(lpl_token_auth_rules::ID, false));
             accounts.push(AccountMeta::new_readonly(*rules, false));
         } else {
             accounts.push(AccountMeta::new_readonly(crate::ID, false));

@@ -1,4 +1,4 @@
-use mpl_utils::cmp_pubkeys;
+use lpl_utils::cmp_pubkeys;
 use safecoin_program::{account_info::AccountInfo, entrypoint::ProgramResult};
 
 use crate::{error::MetadataError, state::ProgrammableConfig};

@@ -1,5 +1,5 @@
 use borsh::BorshSerialize;
-use mpl_utils::assert_signer;
+use lpl_utils::assert_signer;
 use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,

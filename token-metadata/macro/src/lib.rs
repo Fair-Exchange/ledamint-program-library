@@ -297,7 +297,7 @@ fn generate_builders(variants: &[Variant]) -> TokenStream {
     );
     default_pubkeys.insert(
         "authorization_rules_program".to_string(),
-        syn::parse_str::<syn::ExprPath>("mpl_token_auth_rules::ID").unwrap(),
+        syn::parse_str::<syn::ExprPath>("lpl_token_auth_rules::ID").unwrap(),
     );
 
     // build the trait implementation

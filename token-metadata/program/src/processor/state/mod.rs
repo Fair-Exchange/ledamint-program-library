@@ -3,7 +3,7 @@ mod unlock;
 
 use borsh::BorshSerialize;
 pub use lock::*;
-use mpl_utils::assert_signer;
+use lpl_utils::assert_signer;
 use safecoin_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, program::invoke, program_pack::Pack,
     pubkey::Pubkey, system_program, sysvar,

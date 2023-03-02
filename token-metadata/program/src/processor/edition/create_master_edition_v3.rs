@@ -1,5 +1,5 @@
 use borsh::BorshSerialize;
-use mpl_utils::create_or_allocate_account_raw;
+use lpl_utils::create_or_allocate_account_raw;
 use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,

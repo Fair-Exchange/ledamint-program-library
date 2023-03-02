@@ -1,4 +1,4 @@
-use mpl_utils::{assert_signer, close_account_raw};
+use lpl_utils::{assert_signer, close_account_raw};
 use safecoin_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,

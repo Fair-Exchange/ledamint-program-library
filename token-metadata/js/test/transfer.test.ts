@@ -34,7 +34,7 @@ import {
   TokenDelegateRole,
   TransferArgs,
 } from '../src/generated';
-import { PROGRAM_ID as TOKEN_AUTH_RULES_ID } from '@metaplex-foundation/mpl-token-auth-rules';
+import { PROGRAM_ID as TOKEN_AUTH_RULES_ID } from '@metaplex-foundation/lpl-token-auth-rules';
 import { PROGRAM_ID as TOKEN_METADATA_ID } from '../src/generated';
 import { encode } from '@msgpack/msgpack';
 import spok from 'spok';
@@ -266,7 +266,7 @@ test('Transfer: ProgrammableNonFungible (program-owned)', async (t) => {
   t.true(tokenAccount.amount.toString() === '1', 'token account amount equal to 1');
 
   // [FAIL] Our first destination is going to be an account owned by the
-  // mpl-token-auth-rules program as a convenient program-owned account
+  // lpl-token-auth-rules program as a convenient program-owned account
   // that is not owned by token-metadata.
   const invalidDestination = ruleSetPda;
 
@@ -318,7 +318,7 @@ test('Transfer: ProgrammableNonFungible (program-owned)', async (t) => {
     destinationTokenRecord,
   );
 
-  // Cusper matches the error code from mpl-token-auth-rules
+  // Cusper matches the error code from lpl-token-auth-rules
   // to a lpl-token-metadata error which gives us the wrong message
   // so we match on the actual log values here instead.
   invalidTransferTx.then((x) =>
@@ -390,7 +390,7 @@ test('Transfer: ProgrammableNonFungible (program-owned)', async (t) => {
     destinationTokenRecord,
   );
 
-  // Cusper matches the error code from mpl-token-auth-rules
+  // Cusper matches the error code from lpl-token-auth-rules
   // to a lpl-token-metadata error which gives us the wrong message
   // so we match on the actual log values here instead.
   await transferTx.assertSuccess(t);

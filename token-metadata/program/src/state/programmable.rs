@@ -1,7 +1,7 @@
 use std::io::Error;
 
 use borsh::{BorshDeserialize, BorshSerialize};
-use mpl_utils::cmp_pubkeys;
+use lpl_utils::cmp_pubkeys;
 #[cfg(feature = "serde-feature")]
 use serde::{Deserialize, Serialize};
 use shank::ShankAccount;

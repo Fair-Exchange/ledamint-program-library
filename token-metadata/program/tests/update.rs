@@ -105,7 +105,7 @@ mod update {
     #[tokio::test]
     async fn update_pfnt_config() {
         let mut program_test = ProgramTest::new("lpl_token_metadata", lpl_token_metadata::ID, None);
-        program_test.add_program("mpl_token_auth_rules", mpl_token_auth_rules::ID, None);
+        program_test.add_program("lpl_token_auth_rules", lpl_token_auth_rules::ID, None);
         let context = &mut program_test.start_with_context().await;
 
         let authority = Keypair::from_bytes(&context.payer.to_bytes()).unwrap();
@@ -180,7 +180,7 @@ mod update {
         // program or it won't be a valid rule set to call validate on.
         // We relax the check a little to let users fix invalid rule sets.
         let mut program_test = ProgramTest::new("lpl_token_metadata", lpl_token_metadata::ID, None);
-        program_test.add_program("mpl_token_auth_rules", mpl_token_auth_rules::ID, None);
+        program_test.add_program("lpl_token_auth_rules", lpl_token_auth_rules::ID, None);
         let context = &mut program_test.start_with_context().await;
 
         let invalid_rule_set = Pubkey::new_unique();
@@ -251,7 +251,7 @@ mod update {
             panic!("Missing rule set programmable config");
         }
 
-        // Now we pass in a valid authorization rules account owned by mpl-token-auth-rules
+        // Now we pass in a valid authorization rules account owned by lpl-token-auth-rules
         // but which does not match the pubkey we are passing in to set as the rule set value.
         // This will fail with an "InvalidAuthorizationRules" error.
         let mut builder = UpdateBuilder::new();
@@ -328,7 +328,7 @@ mod update {
     async fn cannot_update_rule_set_when_delegate_set() {
         // When a delegate is set, the rule set cannot be updated.
         let mut program_test = ProgramTest::new("lpl_token_metadata", lpl_token_metadata::ID, None);
-        program_test.add_program("mpl_token_auth_rules", mpl_token_auth_rules::ID, None);
+        program_test.add_program("lpl_token_auth_rules", lpl_token_auth_rules::ID, None);
         program_test.set_compute_max_units(400_000);
         let context = &mut program_test.start_with_context().await;
 

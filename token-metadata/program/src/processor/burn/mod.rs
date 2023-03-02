@@ -1,7 +1,7 @@
 #![allow(clippy::module_inception)]
 
 use arrayref::array_ref;
-use mpl_utils::{
+use lpl_utils::{
     assert_signer,
     token::{
         get_mint_decimals, get_mint_supply, safe_token_burn, safe_token_close, TokenBurnParams,

@@ -1,5 +1,5 @@
 use borsh::BorshSerialize;
-use mpl_utils::{
+use lpl_utils::{
     assert_signer,
     token::{safe_token_burn, TokenBurnParams},
 };

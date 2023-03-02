@@ -1,8 +1,8 @@
 use std::fmt::Display;
 
 use borsh::BorshSerialize;
-use mpl_token_auth_rules::utils::get_latest_revision;
-use mpl_utils::{assert_signer, create_or_allocate_account_raw};
+use lpl_token_auth_rules::utils::get_latest_revision;
+use lpl_utils::{assert_signer, create_or_allocate_account_raw};
 use safecoin_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, program::invoke, program_pack::Pack,
     pubkey::Pubkey, system_program, sysvar,
@@ -304,7 +304,7 @@ fn create_persistent_delegate_v1(
                     .authorization_rules_info
                     .ok_or(MetadataError::MissingAuthorizationRules)?;
                 assert_keys_equal(authorization_rules_info.key, &rule_set)?;
-                assert_owned_by(authorization_rules_info, &mpl_token_auth_rules::ID)?;
+                assert_owned_by(authorization_rules_info, &lpl_token_auth_rules::ID)?;
 
                 // validates auth rules program
                 let authorization_rules_program_info = ctx
@@ -313,7 +313,7 @@ fn create_persistent_delegate_v1(
                     .ok_or(MetadataError::MissingAuthorizationRulesProgram)?;
                 assert_keys_equal(
                     authorization_rules_program_info.key,
-                    &mpl_token_auth_rules::ID,
+                    &lpl_token_auth_rules::ID,
                 )?;
 
                 let auth_rules_validate_params = AuthRulesValidateParams {

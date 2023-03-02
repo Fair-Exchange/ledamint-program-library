@@ -34,7 +34,7 @@ then
         cd ../../../
 elif [[ $input = "token-auth-rules" ]]
 then
-    safecoin program dump -u https://api.mainnet-beta.safecoin.org auth9SigNpDKz4sJJ1DfCTuZrZNSAgh9sFD3rboVmgg ./test-programs/mpl_token_auth_rules.so
+    safecoin program dump -u https://api.mainnet-beta.safecoin.org auth9SigNpDKz4sJJ1DfCTuZrZNSAgh9sFD3rboVmgg ./test-programs/lpl_token_auth_rules.so
 elif [[ $input = "rooster" ]]
 then
     safecoin program dump -u https://api.mainnet-beta.safecoin.org Roostrnex2Z9Y2XZC49sFAdZARP8E4iFpEnZC5QJWdz ./test-programs/rooster.so

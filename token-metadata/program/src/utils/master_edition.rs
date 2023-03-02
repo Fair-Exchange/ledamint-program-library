@@ -1,6 +1,6 @@
 use arrayref::{array_mut_ref, array_ref, mut_array_refs};
 use borsh::BorshSerialize;
-use mpl_utils::{
+use lpl_utils::{
     assert_signer, create_or_allocate_account_raw,
     token::{get_mint_authority, get_mint_supply},
 };

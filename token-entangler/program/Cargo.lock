@@ -1972,7 +1972,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "mpl-token-auth-rules"
+name = "lpl-token-auth-rules"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a14e1ac5350734fd07f17d7eab733d27b7b45ca963642c565ec34ab015d9ceda"
@@ -2012,9 +2012,9 @@ checksum = "5accdfde5c18465c65bd664169845a185f8a00d973d5c15396fef858dd2e52d9"
 dependencies = [
  "arrayref",
  "borsh",
- "mpl-token-auth-rules",
+ "lpl-token-auth-rules",
  "lpl-token-metadata-context-derive",
- "mpl-utils",
+ "lpl-utils",
  "num-derive",
  "num-traits",
  "shank",
@@ -2035,7 +2035,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "mpl-utils"
+name = "lpl-utils"
 version = "0.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d6195ce98b92f1d0ea06d0cc9b2392d81673e02b8fb063589926fa73ee6b071a"

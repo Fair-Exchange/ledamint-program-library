@@ -19,7 +19,7 @@
 //     #[tokio::test]
 //     async fn success_migrate() {
 //         let mut program_test = ProgramTest::new("lpl_token_metadata", lpl_token_metadata::ID, None);
-//         program_test.add_program("mpl_token_auth_rules", mpl_token_auth_rules::ID, None);
+//         program_test.add_program("lpl_token_auth_rules", lpl_token_auth_rules::ID, None);
 //         let mut context = program_test.start_with_context().await;
 
 //         let authority = Keypair::from_bytes(&context.payer.to_bytes()).unwrap();
