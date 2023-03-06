@@ -10,7 +10,7 @@ auction_house="hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk"
 bubblegum="BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
 
 [[test.genesis]]
-address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+address = "metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5"
 program = "target/deploy/lpl_token_metadata.so"
 
 [[test.genesis]]

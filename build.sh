@@ -34,10 +34,10 @@ then
         cd ../../../
 elif [[ $input = "token-auth-rules" ]]
 then
-    safecoin program dump -u https://api.mainnet-beta.safecoin.org auth9SigNpDKz4sJJ1DfCTuZrZNSAgh9sFD3rboVmgg ./test-programs/lpl_token_auth_rules.so
+    safecoin program dump -u https://api.mainnet-beta.safecoin.org autNTWWsmgHkTc9xGwaED2K7UMXB1YurFEuwiCKXpS9 ./test-programs/lpl_token_auth_rules.so
 elif [[ $input = "rooster" ]]
 then
-    safecoin program dump -u https://api.mainnet-beta.safecoin.org Roostrnex2Z9Y2XZC49sFAdZARP8E4iFpEnZC5QJWdz ./test-programs/rooster.so
+    safecoin program dump -u https://api.mainnet-beta.safecoin.org rstP3sVCeYPT1QMqESr1xiNM2PwapJnSKBNmJdY96pX ./test-programs/rooster.so
 else
     echo "Invalid program name: $input"
     exit 1

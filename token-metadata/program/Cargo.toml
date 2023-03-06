@@ -31,7 +31,7 @@ lpl-token-metadata-context-derive = { version = "0.2.1", path = "../macro" }
 
 [dev-dependencies]
 rmp-serde = "1.1.1"
-rooster = { git = "https://github.com/metaplex-foundation/rooster" }
+rooster = { path = "../../../rooster/program" }
 safecoin-sdk = {path = "../../../Safecoin/sdk", version = "1.15.3"}
 safecoin-program-test = {path = "../../../Safecoin/program-test", version = "1.15.3"}
 serde = { version = "1.0.147", features = ["derive"]}

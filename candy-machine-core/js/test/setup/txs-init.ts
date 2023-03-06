@@ -37,7 +37,7 @@ import {
   NftWithToken,
 } from '@metaplex-foundation/js';
 
-const METAPLEX_PROGRAM_ID = new PublicKey('metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s');
+const METAPLEX_PROGRAM_ID = new PublicKey('metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5');
 
 export class InitTransactions {
   readonly getKeypair: LoadOrGenKeypair | GenLabeledKeypair;

@@ -11,7 +11,7 @@ function localDeployPath(programName) {
 }
 
 const programs = [
-    {label: "Metadata", programId: 'metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s', deployPath: localDeployPath('lpl_token_metadata')},
+    {label: "Metadata", programId: 'metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5', deployPath: localDeployPath('lpl_token_metadata')},
     {label: "Vault", programId:'vau1zxA2LbssAUEF7Gpw91zMM1LvXrvpzJtmZ58rPsn', deployPath: localDeployPath('lpl_token_vault')},
     {label: "Auction", programId: 'auctxRXPeJoc4817jDhf4HbjnhEcr1cCXenosMhK5R8', deployPath: localDeployPath('mpl_auction')},
     {label: "Metaplex", programId: 'p1exdMJcjVao65QdewkaZRUnU6VPSXhus9n2GzWfh98', deployPath: localDeployPath('mpl_metaplex')},

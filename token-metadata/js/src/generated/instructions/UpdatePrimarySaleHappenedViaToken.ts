@@ -44,7 +44,7 @@ export const updatePrimarySaleHappenedViaTokenInstructionDiscriminator = 4;
  */
 export function createUpdatePrimarySaleHappenedViaTokenInstruction(
   accounts: UpdatePrimarySaleHappenedViaTokenInstructionAccounts,
-  programId = new web3.PublicKey('metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s'),
+  programId = new web3.PublicKey('metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5'),
 ) {
   const [data] = UpdatePrimarySaleHappenedViaTokenStruct.serialize({
     instructionDiscriminator: updatePrimarySaleHappenedViaTokenInstructionDiscriminator,

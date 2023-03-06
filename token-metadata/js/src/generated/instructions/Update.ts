@@ -82,7 +82,7 @@ export const updateInstructionDiscriminator = 50;
 export function createUpdateInstruction(
   accounts: UpdateInstructionAccounts,
   args: UpdateInstructionArgs,
-  programId = new web3.PublicKey('metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s'),
+  programId = new web3.PublicKey('metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5'),
 ) {
   const [data] = UpdateStruct.serialize({
     instructionDiscriminator: updateInstructionDiscriminator,

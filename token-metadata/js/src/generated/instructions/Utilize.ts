@@ -82,7 +82,7 @@ export const utilizeInstructionDiscriminator = 19;
 export function createUtilizeInstruction(
   accounts: UtilizeInstructionAccounts,
   args: UtilizeInstructionArgs,
-  programId = new web3.PublicKey('metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s'),
+  programId = new web3.PublicKey('metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5'),
 ) {
   const [data] = UtilizeStruct.serialize({
     instructionDiscriminator: utilizeInstructionDiscriminator,
