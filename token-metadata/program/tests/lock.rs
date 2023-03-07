@@ -2,7 +2,7 @@
 pub mod utils;
 
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use utils::*;
 
 mod lock {
@@ -13,7 +13,7 @@ mod lock {
         pda::find_token_record_account,
         state::{TokenRecord, TokenStandard, TokenState},
     };
-    use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack, pubkey::Pubkey};
+    use solana_program::{borsh::try_from_slice_unchecked, program_pack::Pack, pubkey::Pubkey};
     use safecoin_sdk::{
         instruction::InstructionError,
         signature::{Keypair, Signer},

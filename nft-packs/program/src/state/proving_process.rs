@@ -3,7 +3,7 @@
 use super::*;
 use borsh::{BorshDeserialize, BorshSerialize};
 use shank::ShankAccount;
-use safecoin_program::{
+use solana_program::{
     borsh::try_from_slice_unchecked,
     msg,
     program_error::ProgramError,

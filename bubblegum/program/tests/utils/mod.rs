@@ -5,8 +5,8 @@ pub mod tx_builder;
 use anchor_lang::{self, InstructionData, ToAccountMetas};
 use bytemuck::PodCastError;
 use mpl_bubblegum::{hash_creators, hash_metadata, state::metaplex_adapter::MetadataArgs};
-use safecoin_program::{instruction::Instruction, pubkey::Pubkey};
-use safecoin_program_test::{BanksClientError, ProgramTest};
+use solana_program::{instruction::Instruction, pubkey::Pubkey};
+use solana_program_test::{BanksClientError, ProgramTest};
 use safecoin_sdk::signature::{Keypair, SignerError};
 use std::result;
 

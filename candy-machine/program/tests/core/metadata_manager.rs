@@ -2,8 +2,8 @@ use lpl_token_metadata::{
     instruction,
     state::{Collection, CollectionDetails, Creator, Metadata, Uses, PREFIX},
 };
-use safecoin_program::borsh::try_from_slice_unchecked;
-use safecoin_program_test::{BanksClientError, ProgramTestContext};
+use solana_program::borsh::try_from_slice_unchecked;
+use solana_program_test::{BanksClientError, ProgramTestContext};
 use safecoin_sdk::{
     pubkey::Pubkey, signature::Signer, signer::keypair::Keypair, transaction::Transaction,
 };

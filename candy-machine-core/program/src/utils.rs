@@ -5,7 +5,7 @@ use lpl_token_metadata::{
     state::{EDITION, PREFIX},
     utils::assert_derivation,
 };
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo,
     program::invoke,
     program_memory::sol_memcmp,

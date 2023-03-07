@@ -17,7 +17,7 @@ use lpl_token_metadata::{
     state::{MasterEditionV2, Metadata, EDITION, PREFIX},
     utils::{assert_derivation, assert_initialized},
 };
-use safecoin_program::{
+use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     msg,

@@ -15,7 +15,7 @@ mod suspend_market {
         state::{Market, MarketState},
         utils::find_treasury_owner_address,
     };
-    use safecoin_program_test::*;
+    use solana_program_test::*;
     use safecoin_sdk::{
         commitment_config::CommitmentLevel,
         instruction::Instruction,

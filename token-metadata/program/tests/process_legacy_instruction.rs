@@ -2,8 +2,8 @@
 pub mod utils;
 
 use num_traits::FromPrimitive;
-use safecoin_program::pubkey::Pubkey;
-use safecoin_program_test::*;
+use solana_program::pubkey::Pubkey;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -18,7 +18,7 @@ mod process_legacy_instruction {
         instruction::{sign_metadata, DelegateArgs},
         state::{Metadata, TokenStandard},
     };
-    use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
+    use solana_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
     use safe_token::state::Account;
 
     use super::*;

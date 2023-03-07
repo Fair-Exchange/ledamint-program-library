@@ -1,8 +1,8 @@
 #![cfg(feature = "test-bpf")]
 #![allow(dead_code)]
 
-use safecoin_program::clock::Clock;
-use safecoin_program_test::*;
+use solana_program::clock::Clock;
+use solana_program_test::*;
 use safecoin_sdk::{signature::Keypair, signer::Signer};
 
 use mpl_candy_machine::{

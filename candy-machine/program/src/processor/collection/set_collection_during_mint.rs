@@ -4,7 +4,7 @@ use lpl_token_metadata::{
     state::{Metadata, TokenMetadataAccount},
     utils::assert_derivation,
 };
-use safecoin_program::{
+use solana_program::{
     program::invoke_signed, sysvar, sysvar::instructions::get_instruction_relative,
 };
 

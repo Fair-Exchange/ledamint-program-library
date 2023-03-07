@@ -3,7 +3,7 @@
 // use utils::*;
 
 // use num_traits::FromPrimitive;
-// use safecoin_program_test::*;
+// use solana_program_test::*;
 // use safecoin_sdk::{instruction::InstructionError, transaction::TransactionError};
 
 // mod migrate {
@@ -13,7 +13,7 @@
 //         instruction::MigrateArgs,
 //         state::{MigrationType, ProgrammableConfig, TokenStandard},
 //     };
-//     use safecoin_program::pubkey::Pubkey;
+//     use solana_program::pubkey::Pubkey;
 //     use safecoin_sdk::{signature::Keypair, signer::Signer};
 
 //     #[tokio::test]

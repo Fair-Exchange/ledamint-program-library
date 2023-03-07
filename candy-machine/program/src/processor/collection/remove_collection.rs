@@ -3,7 +3,7 @@ use lpl_token_metadata::{
     instruction::revoke_collection_authority,
     state::{Metadata, TokenMetadataAccount},
 };
-use safecoin_program::program::invoke;
+use solana_program::program::invoke;
 
 use crate::{
     cmp_pubkeys, constants::COLLECTIONS_FEATURE_INDEX, remove_feature_flag, CandyError,

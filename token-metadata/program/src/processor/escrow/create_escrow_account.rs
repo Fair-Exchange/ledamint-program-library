@@ -1,6 +1,6 @@
 use borsh::BorshSerialize;
 use lpl_utils::{assert_signer, create_or_allocate_account_raw};
-use safecoin_program::{
+use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     program_memory::sol_memcpy,
@@ -51,7 +51,7 @@ pub fn process_create_escrow_account(
     }
 
     let sysvar_ix_account_info = next_account_info(account_info_iter)?;
-    if sysvar_ix_account_info.key != &safecoin_program::sysvar::instructions::ID {
+    if sysvar_ix_account_info.key != &solana_program::sysvar::instructions::ID {
         return Err(MetadataError::InvalidInstructionsSysvar.into());
     }
 

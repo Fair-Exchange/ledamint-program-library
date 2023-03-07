@@ -3,8 +3,8 @@ use crate::state::{Fanout, FanoutMembershipVoucher};
 
 use crate::utils::validation::*;
 use anchor_lang::prelude::*;
-use anchor_lang::safecoin_program::sysvar;
-use anchor_lang::safecoin_program::sysvar::instructions::get_instruction_relative;
+use anchor_lang::solana_program::sysvar;
+use anchor_lang::solana_program::sysvar::instructions::get_instruction_relative;
 use anchor_spl::token::{Mint, Token, TokenAccount};
 
 #[derive(Accounts)]

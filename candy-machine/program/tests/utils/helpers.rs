@@ -1,5 +1,5 @@
 use console::style;
-use safecoin_program::{native_token::LAMPORTS_PER_SAFE, pubkey::Pubkey};
+use solana_program::{native_token::LAMPORTS_PER_SAFE, pubkey::Pubkey};
 use safe_associated_token_account::get_associated_token_address;
 
 use crate::utils::{FreezeInfo, TokenInfo};

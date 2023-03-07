@@ -8,7 +8,7 @@ use crate::{
 };
 use borsh::{BorshDeserialize, BorshSerialize};
 use shank::ShankInstruction;
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     system_program, sysvar,

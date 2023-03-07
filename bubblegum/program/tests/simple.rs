@@ -1,7 +1,7 @@
 #![cfg(feature = "test-bpf")]
 pub mod utils;
 
-use anchor_lang::safecoin_program::instruction::InstructionError;
+use anchor_lang::solana_program::instruction::InstructionError;
 use lpl_token_metadata::{
     pda::{find_master_edition_account, find_metadata_account},
     state::{
@@ -10,8 +10,8 @@ use lpl_token_metadata::{
     },
     utils::puffed_out_string,
 };
-use safecoin_program::{account_info::AccountInfo, program_option::COption, program_pack::Pack};
-use safecoin_program_test::{tokio, BanksClientError};
+use solana_program::{account_info::AccountInfo, program_option::COption, program_pack::Pack};
+use solana_program_test::{tokio, BanksClientError};
 use safecoin_sdk::signature::{Keypair, Signer};
 use safecoin_sdk::transaction::TransactionError;
 

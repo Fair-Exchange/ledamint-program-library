@@ -17,7 +17,7 @@ serde-feature = ["serde", "serde_with"]
 num-derive = "0.3"
 arrayref = "0.3.6"
 num-traits = "0.2"
-safecoin-program = {path = "../../../Safecoin/sdk/program", version = "1.15.3"}
+safecoin-program = {path = "../../../Safecoin/sdk/program", version = "1.14.17"}
 safe-token = {version = "=3.5.0", path = "../../../safecoin-program-library/token/program", features = ["no-entrypoint"] }
 safe-associated-token-account = { version = "1.1.1", path = "../../../safecoin-program-library/associated-token-account/program",  features = ["no-entrypoint"] }
 lpl-token-auth-rules = { version = "1.2.0", path = "../../../lpl-token-auth-rules/program", features = ["no-entrypoint"] }
@@ -32,8 +32,8 @@ lpl-token-metadata-context-derive = { version = "0.2.1", path = "../macro" }
 [dev-dependencies]
 rmp-serde = "1.1.1"
 rooster = { path = "../../../rooster/program" }
-safecoin-sdk = {path = "../../../Safecoin/sdk", version = "1.15.3"}
-safecoin-program-test = {path = "../../../Safecoin/program-test", version = "1.15.3"}
+safecoin-sdk = {path = "../../../Safecoin/sdk", version = "1.14.17"}
+safecoin-program-test = {path = "../../../Safecoin/program-test", version = "1.14.17"}
 serde = { version = "1.0.147", features = ["derive"]}
 async-trait = "0.1.64"
 

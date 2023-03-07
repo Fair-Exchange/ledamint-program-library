@@ -4,7 +4,7 @@ use anchor_lang::{
     InstructionData, ToAccountMetas,
 };
 use lpl_token_metadata::{instruction::create_metadata_accounts_v3, pda::find_metadata_account};
-use safecoin_program_test::{tokio, ProgramTest};
+use solana_program_test::{tokio, ProgramTest};
 use safecoin_sdk::{
     instruction::Instruction, program_pack::Pack, signature::Keypair, signer::Signer,
     system_instruction::create_account, transaction::Transaction,

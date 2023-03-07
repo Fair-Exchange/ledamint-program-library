@@ -20,8 +20,8 @@ mod claim_resource {
             find_treasury_owner_address, find_vault_owner_address,
         },
     };
-    use safecoin_program::clock::Clock;
-    use safecoin_program_test::*;
+    use solana_program::clock::Clock;
+    use solana_program_test::*;
     use safecoin_sdk::{
         commitment_config::CommitmentLevel,
         instruction::{AccountMeta, Instruction},

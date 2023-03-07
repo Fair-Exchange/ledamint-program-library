@@ -1,6 +1,6 @@
 use lpl_token_auth_rules::utils::assert_owned_by;
 use lpl_utils::{assert_signer, create_or_allocate_account_raw};
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, program_error::ProgramError,
     program_option::COption, pubkey, pubkey::Pubkey, system_program, sysvar,
 };

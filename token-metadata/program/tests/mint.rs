@@ -1,7 +1,7 @@
 #![cfg(feature = "test-bpf")]
 pub mod utils;
 
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{instruction::InstructionError, signature::Signer, transaction::TransactionError};
 use utils::*;
 
@@ -9,7 +9,7 @@ mod mint {
 
     use lpl_token_metadata::{error::MetadataError, state::TokenStandard};
     use num_traits::FromPrimitive;
-    use safecoin_program::program_pack::Pack;
+    use solana_program::program_pack::Pack;
     use safe_token::state::Account;
 
     use super::*;

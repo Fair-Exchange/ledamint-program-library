@@ -7,7 +7,7 @@ use lpl_token_metadata::{
     state::{UseAuthorityRecord, UseMethod, Uses},
 };
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -17,7 +17,7 @@ use utils::*;
 mod approve_use_authority {
 
     use lpl_token_metadata::{pda::find_program_as_burner_account, state::Key};
-    use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
+    use solana_program::{borsh::try_from_slice_unchecked, program_pack::Pack};
     use safe_token::state::Account;
 
     use super::*;

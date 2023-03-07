@@ -1,5 +1,5 @@
 use crate::{constants::*, errors::*, utils::*, AuctionHouse, Auctioneer, AuthorityScope, *};
-use anchor_lang::{prelude::*, safecoin_program::program_pack::Pack, AnchorDeserialize};
+use anchor_lang::{prelude::*, solana_program::program_pack::Pack, AnchorDeserialize};
 use safe_token::state::Account as SplAccount;
 
 /// Accounts for the [`execute_sale` handler](auction_house/fn.execute_sale.html).

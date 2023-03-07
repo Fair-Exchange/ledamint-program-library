@@ -11,7 +11,7 @@ use mpl_auction_house::{
 
 use crate::{constants::*, sell::config::*, utils::*};
 
-use safecoin_program::program::invoke_signed;
+use solana_program::program::invoke_signed;
 
 #[derive(Accounts)]
 #[instruction(escrow_payment_bump: u8, free_trade_state_bump: u8, program_as_signer_bump: u8, auctioneer_authority_bump: u8, buyer_price: u64, token_size: u64)]
@@ -211,7 +211,7 @@ pub fn auctioneer_execute_sale<'info>(
 
     cpi_account_metas.append(&mut ctx.remaining_accounts.to_vec().to_account_metas(None));
 
-    let ix = safecoin_program::instruction::Instruction {
+    let ix = solana_program::instruction::Instruction {
         program_id: cpi_program.key(),
         accounts: cpi_account_metas,
         data: execute_sale_data.data(),

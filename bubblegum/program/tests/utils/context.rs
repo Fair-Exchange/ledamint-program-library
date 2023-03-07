@@ -1,8 +1,8 @@
 use std::fmt::Display;
 
 use mpl_bubblegum::state::metaplex_adapter::{Creator, MetadataArgs, TokenProgramVersion};
-use safecoin_program::pubkey::Pubkey;
-use safecoin_program_test::{BanksClient, ProgramTestContext};
+use solana_program::pubkey::Pubkey;
+use solana_program_test::{BanksClient, ProgramTestContext};
 use safecoin_sdk::{
     signature::{Keypair, Signer},
     system_instruction,

@@ -17,7 +17,7 @@ use delete_pack_voucher::delete_pack_voucher;
 use edit_pack::edit_pack;
 use init_pack::init_pack;
 use request_card_to_redeem::request_card_for_redeem;
-use safecoin_program::{account_info::AccountInfo, entrypoint::ProgramResult, msg, pubkey::Pubkey};
+use solana_program::{account_info::AccountInfo, entrypoint::ProgramResult, msg, pubkey::Pubkey};
 
 pub mod activate;
 pub mod add_card_to_pack;

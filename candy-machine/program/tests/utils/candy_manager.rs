@@ -3,8 +3,8 @@ use std::{fmt::Debug, str::FromStr};
 use anchor_lang::AccountDeserialize;
 use lpl_token_metadata::{pda::find_collection_authority_account, state::Metadata};
 use solana_gateway::state::{get_expire_address_with_seed, get_gateway_token_address_with_seed};
-use safecoin_program::{clock::Clock, program_option::COption, pubkey::Pubkey};
-use safecoin_program_test::ProgramTestContext;
+use solana_program::{clock::Clock, program_option::COption, pubkey::Pubkey};
+use solana_program_test::ProgramTestContext;
 use safecoin_sdk::{
     signature::{Keypair, Signer},
     transport,

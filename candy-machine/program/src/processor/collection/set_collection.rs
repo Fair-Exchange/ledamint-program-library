@@ -5,7 +5,7 @@ use lpl_token_metadata::{
     state::{Metadata, TokenMetadataAccount},
     utils::create_or_allocate_account_raw,
 };
-use safecoin_program::program::invoke;
+use solana_program::program::invoke;
 
 use crate::{
     cmp_pubkeys,

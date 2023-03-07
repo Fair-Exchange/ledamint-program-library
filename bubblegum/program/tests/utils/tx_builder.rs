@@ -1,8 +1,8 @@
 use std::cell::{RefCell, RefMut};
 
 use anchor_lang::{self, InstructionData, ToAccountMetas};
-use safecoin_program::pubkey::Pubkey;
-use safecoin_program_test::BanksClient;
+use solana_program::pubkey::Pubkey;
+use solana_program_test::BanksClient;
 use safecoin_sdk::{instruction::AccountMeta, signature::Keypair, transaction::Transaction};
 
 use super::{clone_keypair, instruction, tree::Tree, Error, LeafArgs, Result};

@@ -1,7 +1,7 @@
 use super::create_token_account;
 use crate::*;
-use safecoin_program::pubkey::Pubkey;
-use safecoin_program_test::ProgramTestContext;
+use solana_program::pubkey::Pubkey;
+use solana_program_test::ProgramTestContext;
 use safecoin_sdk::{
     signature::{Keypair, Signer},
     transport,

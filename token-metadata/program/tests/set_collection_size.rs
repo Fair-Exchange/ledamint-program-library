@@ -13,11 +13,11 @@ use lpl_token_metadata::{
     ID as PROGRAM_ID,
 };
 use num_traits::FromPrimitive;
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
 };
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::Keypair,

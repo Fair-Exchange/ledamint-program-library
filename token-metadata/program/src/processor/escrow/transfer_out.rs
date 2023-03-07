@@ -1,5 +1,5 @@
 use lpl_utils::assert_signer;
-use safecoin_program::{
+use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     program::{invoke, invoke_signed},
@@ -50,7 +50,7 @@ pub fn process_transfer_out_of_escrow(
     assert_owned_by(escrow_account_info, &safe_token::ID)?;
 
     let system_program_info = next_account_info(account_info_iter)?;
-    if system_program_info.key != &safecoin_program::system_program::ID {
+    if system_program_info.key != &solana_program::system_program::ID {
         return Err(MetadataError::InvalidSystemProgram.into());
     }
 
@@ -65,7 +65,7 @@ pub fn process_transfer_out_of_escrow(
     }
 
     let sysvar_ix_account_info = next_account_info(account_info_iter)?;
-    if sysvar_ix_account_info.key != &safecoin_program::sysvar::instructions::ID {
+    if sysvar_ix_account_info.key != &solana_program::sysvar::instructions::ID {
         return Err(MetadataError::InvalidInstructionsSysvar.into());
     }
 

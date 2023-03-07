@@ -1,7 +1,7 @@
 use std::fmt::{Display, Formatter};
 
 use lpl_utils::assert_signer;
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, msg, program_error::ProgramError,
     program_pack::Pack, pubkey::Pubkey, sysvar,
 };
@@ -87,7 +87,7 @@ fn update_v1(program_id: &Pubkey, ctx: Context<Update>, args: UpdateArgs) -> Pro
 
     // Check program IDs
 
-    if ctx.accounts.system_program_info.key != &safecoin_program::system_program::ID {
+    if ctx.accounts.system_program_info.key != &solana_program::system_program::ID {
         return Err(ProgramError::IncorrectProgramId);
     }
     if ctx.accounts.sysvar_instructions_info.key != &sysvar::instructions::ID {

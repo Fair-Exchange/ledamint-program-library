@@ -2,7 +2,7 @@ use lpl_token_metadata::{
     instruction::{self},
     state::{MasterEditionV2, Metadata, EDITION, PREFIX},
 };
-use safecoin_program::borsh::try_from_slice_unchecked;
+use solana_program::borsh::try_from_slice_unchecked;
 use safecoin_sdk::{pubkey::Pubkey, signature::Signer, transaction::Transaction};
 use safe_associated_token_account::get_associated_token_address;
 

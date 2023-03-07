@@ -21,7 +21,7 @@ use safecoin_sdk::{commitment_config::CommitmentLevel, signer::Signer};
 
 use std::assert_eq;
 
-use safecoin_program::{
+use solana_program::{
     instruction::{Instruction, InstructionError},
     system_program, sysvar,
 };
@@ -30,7 +30,7 @@ use mpl_auction_house::{
     pda::{find_escrow_payment_address, find_program_as_signer_address, find_trade_state_address},
     receipt::{BidReceipt, ListingReceipt, PurchaseReceipt},
 };
-use safecoin_program::program_pack::Pack;
+use solana_program::program_pack::Pack;
 use safecoin_sdk::{
     signature::Keypair,
     transaction::{Transaction, TransactionError},

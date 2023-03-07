@@ -18,8 +18,8 @@ mod init_selling_resource {
         accounts as mpl_fixed_price_sale_accounts, instruction as mpl_fixed_price_sale_instruction,
         state::{SellingResource, SellingResourceState},
     };
-    use safecoin_program::{instruction::Instruction, sysvar};
-    use safecoin_program_test::*;
+    use solana_program::{instruction::Instruction, sysvar};
+    use solana_program_test::*;
     use safecoin_sdk::{commitment_config::CommitmentLevel, transaction::Transaction};
 
     #[tokio::test]

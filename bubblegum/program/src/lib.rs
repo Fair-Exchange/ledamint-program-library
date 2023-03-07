@@ -16,7 +16,7 @@ use crate::{
 };
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{
+    solana_program::{
         account_info::AccountInfo,
         keccak,
         program::{invoke, invoke_signed},

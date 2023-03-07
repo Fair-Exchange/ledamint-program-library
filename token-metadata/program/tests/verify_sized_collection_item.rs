@@ -13,7 +13,7 @@ use lpl_token_metadata::{
     ID as PROGRAM_ID,
 };
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -23,7 +23,7 @@ use utils::*;
 mod verify_sized_collection_item {
 
     use lpl_token_metadata::state::{CollectionAuthorityRecord, COLLECTION_AUTHORITY_RECORD_SIZE};
-    use safecoin_program::borsh::try_from_slice_unchecked;
+    use solana_program::borsh::try_from_slice_unchecked;
     use safecoin_sdk::transaction::Transaction;
 
     use super::*;

@@ -3,11 +3,11 @@
 
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{program::invoke, system_instruction},
+    solana_program::{program::invoke, system_instruction},
     AnchorDeserialize,
 };
 use anchor_spl::token::{Mint, Token, TokenAccount};
-use safecoin_program::program_memory::sol_memset;
+use solana_program::program_memory::sol_memset;
 
 use crate::{
     constants::*, errors::AuctionHouseError, utils::*, AuctionHouse, Auctioneer, AuthorityScope,

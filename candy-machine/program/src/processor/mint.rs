@@ -14,7 +14,7 @@ use solana_gateway::{
     state::{GatewayTokenAccess, InPlaceGatewayToken},
     Gateway,
 };
-use safecoin_program::{
+use solana_program::{
     clock::Clock,
     program::{invoke, invoke_signed},
     serialize_utils::{read_pubkey, read_u16},
@@ -204,7 +204,7 @@ pub fn handle_mint_nft<'info>(
 
         if !cmp_pubkeys(&program_id, &crate::id())
             && !cmp_pubkeys(&program_id, &safe_token::id())
-            && !cmp_pubkeys(&program_id, &safecoin_program::system_program::ID)
+            && !cmp_pubkeys(&program_id, &solana_program::system_program::ID)
             && !cmp_pubkeys(&program_id, &A_TOKEN)
             && !cmp_pubkeys(&program_id, &COMPUTE_BUDGET)
         {

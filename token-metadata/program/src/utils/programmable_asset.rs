@@ -3,7 +3,7 @@ use lpl_token_auth_rules::{
     payload::PayloadType,
 };
 use lpl_utils::{create_or_allocate_account_raw, token::TokenTransferParams};
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, msg, program::invoke_signed,
     program_error::ProgramError, pubkey::Pubkey,
 };

@@ -1,7 +1,7 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 #[cfg(feature = "serde-feature")]
 use serde::{Deserialize, Serialize};
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     system_program, sysvar,
@@ -56,7 +56,7 @@ pub fn create_escrow_account(
         AccountMeta::new_readonly(token_account, false),
         AccountMeta::new_readonly(edition_account, false),
         AccountMeta::new(payer_account, true),
-        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
+        AccountMeta::new_readonly(solana_program::system_program::id(), false),
         AccountMeta::new_readonly(sysvar::instructions::id(), false),
     ];
 
@@ -104,7 +104,7 @@ pub fn transfer_out_of_escrow(
         AccountMeta::new(attribute_dst, false),
         AccountMeta::new_readonly(escrow_mint, false),
         AccountMeta::new_readonly(escrow_account, false),
-        AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
+        AccountMeta::new_readonly(solana_program::system_program::id(), false),
         AccountMeta::new_readonly(safe_associated_token_account::id(), false),
         AccountMeta::new_readonly(safe_token::id(), false),
         AccountMeta::new_readonly(sysvar::instructions::id(), false),

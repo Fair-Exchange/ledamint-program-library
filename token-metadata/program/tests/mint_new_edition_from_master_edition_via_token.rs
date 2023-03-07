@@ -8,7 +8,7 @@ use lpl_token_metadata::{
     state::{Collection, Creator, Key, MAX_MASTER_EDITION_LEN},
 };
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     account::AccountSharedData,
     instruction::InstructionError,
@@ -21,7 +21,7 @@ use utils::*;
 // via (cd ../../token-vault/program/ && cargo build-bpf)
 mod mint_new_edition_from_master_edition_via_token {
 
-    use safecoin_program::native_token::LAMPORTS_PER_SAFE;
+    use solana_program::native_token::LAMPORTS_PER_SAFE;
 
     use super::*;
     #[tokio::test]

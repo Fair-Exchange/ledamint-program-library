@@ -12,7 +12,7 @@ use mpl_auction_house::{
     AuctionHouse,
 };
 
-use safecoin_program::program::invoke_signed;
+use solana_program::program::invoke_signed;
 
 /// Accounts for the [`withdraw_with_auctioneer` handler](auction_house/fn.withdraw_with_auctioneer.html).
 #[derive(Accounts, Clone)]
@@ -104,7 +104,7 @@ pub fn auctioneer_withdraw<'info>(
         amount,
     };
 
-    let ix = safecoin_program::instruction::Instruction {
+    let ix = solana_program::instruction::Instruction {
         program_id: cpi_program.key(),
         accounts: cpi_accounts
             .to_account_metas(None)

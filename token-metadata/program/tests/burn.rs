@@ -11,8 +11,8 @@ use lpl_token_metadata::{
     },
 };
 use num_traits::FromPrimitive;
-use safecoin_program::{program_pack::Pack, pubkey::Pubkey};
-use safecoin_program_test::*;
+use solana_program::{program_pack::Pack, pubkey::Pubkey};
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::Keypair,
@@ -25,7 +25,7 @@ use utils::*;
 
 mod pnft {
     use lpl_token_metadata::{instruction::TransferArgs, pda::find_token_record_account};
-    use safecoin_program::system_instruction;
+    use solana_program::system_instruction;
 
     use super::*;
 
@@ -2519,7 +2519,7 @@ mod nft_edition {
 
 mod fungible {
     use lpl_token_metadata::instruction::TransferArgs;
-    use safecoin_program::native_token::LAMPORTS_PER_SAFE;
+    use solana_program::native_token::LAMPORTS_PER_SAFE;
 
     use super::*;
 

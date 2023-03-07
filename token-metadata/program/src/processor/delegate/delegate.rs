@@ -3,7 +3,7 @@ use std::fmt::Display;
 use borsh::BorshSerialize;
 use lpl_token_auth_rules::utils::get_latest_revision;
 use lpl_utils::{assert_signer, create_or_allocate_account_raw};
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, program::invoke, program_pack::Pack,
     pubkey::Pubkey, system_program, sysvar,
 };

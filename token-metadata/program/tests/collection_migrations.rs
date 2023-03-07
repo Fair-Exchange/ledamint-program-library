@@ -2,7 +2,7 @@
 pub mod utils;
 
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},

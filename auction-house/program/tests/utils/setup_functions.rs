@@ -22,7 +22,7 @@ use mpl_testing_utils::{solana::airdrop, utils::Metadata};
 use std::result::Result as StdResult;
 
 use lpl_token_metadata::pda::find_metadata_account;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{instruction::Instruction, transaction::Transaction};
 use safe_associated_token_account::get_associated_token_address;
 
@@ -126,7 +126,7 @@ pub fn deposit(
         treasury_mint: ah.treasury_mint,
         payment_account: buyer.pubkey(),
         transfer_authority: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         escrow_payment_account: escrow,
     };
@@ -190,7 +190,7 @@ pub fn auctioneer_deposit(
         auction_house_fee_account: ah.auction_house_fee_account,
         ah_auctioneer_pda: auctioneer_pda,
         token_program: safe_token::id(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
     };
     let account_metas = accounts.to_account_metas(None);
@@ -259,7 +259,7 @@ pub fn buy(
         treasury_mint: ah.treasury_mint,
         payment_account: buyer.pubkey(),
         transfer_authority: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         escrow_payment_account: escrow,
     };
@@ -284,7 +284,7 @@ pub fn buy(
     let print_receipt_accounts = mpl_auction_house::accounts::PrintBidReceipt {
         receipt: bid_receipt,
         bookkeeper: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         instruction: sysvar::instructions::id(),
     };
@@ -351,7 +351,7 @@ pub fn auctioneer_buy(
         treasury_mint: ah.treasury_mint,
         payment_account: buyer.pubkey(),
         transfer_authority: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         escrow_payment_account: escrow,
     };
@@ -422,7 +422,7 @@ pub fn public_buy(
         treasury_mint: ah.treasury_mint,
         payment_account: buyer.pubkey(),
         transfer_authority: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         escrow_payment_account: escrow,
     };
@@ -446,7 +446,7 @@ pub fn public_buy(
     let print_receipt_accounts = mpl_auction_house::accounts::PrintBidReceipt {
         receipt: bid_receipt,
         bookkeeper: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         instruction: sysvar::instructions::id(),
     };
@@ -516,7 +516,7 @@ pub fn auctioneer_public_buy(
         payment_account: buyer.pubkey(),
         transfer_authority: buyer.pubkey(),
         ah_auctioneer_pda: auctioneer_pda,
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         escrow_payment_account: escrow,
     };
@@ -788,7 +788,7 @@ pub fn sell_mint(
         seller_trade_state,
         free_seller_trade_state,
         token_program: safe_token::id(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         program_as_signer: pas,
         rent: sysvar::rent::id(),
     };
@@ -877,7 +877,7 @@ pub fn auctioneer_sell_mint(
         free_seller_trade_state,
         ah_auctioneer_pda: auctioneer_pda,
         token_program: safe_token::id(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         program_as_signer: pas,
         rent: sysvar::rent::id(),
     };
@@ -957,7 +957,7 @@ pub fn sell(
         seller_trade_state,
         free_seller_trade_state,
         token_program: safe_token::id(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         program_as_signer: pas,
         rent: sysvar::rent::id(),
     };
@@ -1047,7 +1047,7 @@ pub fn auctioneer_sell(
         free_seller_trade_state,
         ah_auctioneer_pda: auctioneer_pda,
         token_program: safe_token::id(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         program_as_signer: pas,
         rent: sysvar::rent::id(),
     };

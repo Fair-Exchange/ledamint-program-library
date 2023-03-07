@@ -11,8 +11,8 @@ use lpl_token_metadata::{
     utils::puffed_out_string,
 };
 use num_traits::FromPrimitive;
-use safecoin_program::{borsh::try_from_slice_unchecked, native_token::LAMPORTS_PER_SAFE};
-use safecoin_program_test::*;
+use solana_program::{borsh::try_from_slice_unchecked, native_token::LAMPORTS_PER_SAFE};
+use solana_program_test::*;
 use safecoin_sdk::{
     account::{Account, AccountSharedData},
     instruction::InstructionError,
@@ -23,7 +23,7 @@ use utils::*;
 mod verify_collection {
 
     use lpl_token_metadata::state::{CollectionAuthorityRecord, COLLECTION_AUTHORITY_RECORD_SIZE};
-    use safecoin_program::borsh::try_from_slice_unchecked;
+    use solana_program::borsh::try_from_slice_unchecked;
     use safecoin_sdk::transaction::Transaction;
 
     use super::*;

@@ -6,7 +6,7 @@ use crate::{
 };
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{program::invoke, system_instruction},
+    solana_program::{program::invoke, system_instruction},
 };
 use anchor_spl::token::accessor;
 

@@ -7,7 +7,7 @@ use lpl_token_metadata::{
     utils::puffed_out_string,
 };
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::Signer,
@@ -22,7 +22,7 @@ mod update {
         instruction::{DelegateArgs, RuleSetToggle, UpdateArgs},
         state::{Creator, Data, ProgrammableConfig, TokenStandard},
     };
-    use safecoin_program::pubkey::Pubkey;
+    use solana_program::pubkey::Pubkey;
     use safecoin_sdk::signature::Keypair;
 
     use super::*;

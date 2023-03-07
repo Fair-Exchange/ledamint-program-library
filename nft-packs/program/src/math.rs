@@ -1,5 +1,5 @@
 //! Safe math implementation
-use safecoin_program::program_error::ProgramError;
+use solana_program::program_error::ProgramError;
 
 use crate::error::NFTPacksError;
 

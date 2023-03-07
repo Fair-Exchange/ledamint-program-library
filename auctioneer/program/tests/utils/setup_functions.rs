@@ -20,7 +20,7 @@ use mpl_testing_utils::{solana::airdrop, utils::Metadata};
 use std::result::Result as StdResult;
 
 use lpl_token_metadata::pda::find_metadata_account;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{clock::UnixTimestamp, instruction::Instruction, transaction::Transaction};
 use safe_associated_token_account::get_associated_token_address;
 
@@ -170,7 +170,7 @@ pub fn deposit(
         treasury_mint: ah.treasury_mint,
         payment_account: buyer.pubkey(),
         transfer_authority: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         escrow_payment_account: escrow,
         auctioneer_authority,
@@ -242,7 +242,7 @@ pub fn buy(
         treasury_mint: ah.treasury_mint,
         payment_account: buyer.pubkey(),
         transfer_authority: buyer.pubkey(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         rent: sysvar::rent::id(),
         escrow_payment_account: escrow,
         auctioneer_authority,
@@ -425,7 +425,7 @@ pub fn sell_mint(
         seller_trade_state,
         free_seller_trade_state,
         token_program: safe_token::id(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         program_as_signer: pas,
         rent: sysvar::rent::id(),
         auctioneer_authority,
@@ -528,7 +528,7 @@ pub fn sell(
         seller_trade_state,
         free_seller_trade_state,
         token_program: safe_token::id(),
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         program_as_signer: pas,
         rent: sysvar::rent::id(),
         auctioneer_authority,

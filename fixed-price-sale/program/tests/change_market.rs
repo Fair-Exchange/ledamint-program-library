@@ -17,7 +17,7 @@ mod change_market {
             find_treasury_owner_address, puffed_out_string, DESCRIPTION_MAX_LEN, NAME_MAX_LEN,
         },
     };
-    use safecoin_program_test::*;
+    use solana_program_test::*;
     use safecoin_sdk::{
         commitment_config::CommitmentLevel,
         instruction::Instruction,

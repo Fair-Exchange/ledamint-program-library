@@ -7,7 +7,7 @@ use crate::{
     utils::*,
 };
 use mpl_metaplex::state::{Store, WhitelistedCreator, PREFIX};
-use safecoin_program::{
+use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     program_error::ProgramError,

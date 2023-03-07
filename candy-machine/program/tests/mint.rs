@@ -3,8 +3,8 @@
 
 use anchor_client::safecoin_sdk::transaction::Transaction;
 use mpl_candy_machine::WhitelistMintMode;
-use safecoin_program::{instruction::InstructionError, pubkey::Pubkey};
-use safecoin_program_test::*;
+use solana_program::{instruction::InstructionError, pubkey::Pubkey};
+use solana_program_test::*;
 use safecoin_sdk::{
     account::{AccountSharedData, WritableAccount},
     signature::Keypair,

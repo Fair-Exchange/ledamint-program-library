@@ -3,7 +3,7 @@ pub mod utils;
 
 use lpl_token_metadata::state::Metadata as ProgramMetadata;
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{instruction::InstructionError, signer::Signer, transaction::TransactionError};
 use utils::*;
 mod burn_nft {
@@ -13,7 +13,7 @@ mod burn_nft {
         error::MetadataError,
         state::{Collection, CollectionDetails},
     };
-    use safecoin_program::pubkey::Pubkey;
+    use solana_program::pubkey::Pubkey;
     use safecoin_sdk::signature::Keypair;
 
     use super::*;

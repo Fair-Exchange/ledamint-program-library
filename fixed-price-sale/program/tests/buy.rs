@@ -24,8 +24,8 @@ mod buy {
             find_trade_history_address, find_treasury_owner_address, find_vault_owner_address,
         },
     };
-    use safecoin_program::{clock::Clock, instruction::AccountMeta};
-    use safecoin_program_test::*;
+    use solana_program::{clock::Clock, instruction::AccountMeta};
+    use solana_program_test::*;
     use safecoin_sdk::{
         commitment_config::CommitmentLevel,
         instruction::{Instruction, InstructionError},
@@ -361,7 +361,7 @@ mod buy {
 
         let market_keypair = Keypair::new();
 
-        let treasury_mint = anchor_lang::safecoin_program::system_program::id();
+        let treasury_mint = anchor_lang::solana_program::system_program::id();
 
         let (treasury_owner, treasyry_owner_bump) =
             find_treasury_owner_address(&treasury_mint, &selling_resource_keypair.pubkey());
@@ -2501,7 +2501,7 @@ mod buy {
 
         let market_keypair = Keypair::new();
 
-        let treasury_mint = anchor_lang::safecoin_program::system_program::id();
+        let treasury_mint = anchor_lang::solana_program::system_program::id();
 
         let (treasury_owner, treasyry_owner_bump) =
             find_treasury_owner_address(&treasury_mint, &selling_resource_keypair.pubkey());
@@ -2821,7 +2821,7 @@ mod buy {
 
         let market_keypair = Keypair::new();
 
-        let treasury_mint = anchor_lang::safecoin_program::system_program::id();
+        let treasury_mint = anchor_lang::solana_program::system_program::id();
 
         let (treasury_owner, treasyry_owner_bump) =
             find_treasury_owner_address(&treasury_mint, &selling_resource_keypair.pubkey());
@@ -3141,7 +3141,7 @@ mod buy {
 
         let market_keypair = Keypair::new();
 
-        let treasury_mint = anchor_lang::safecoin_program::system_program::id();
+        let treasury_mint = anchor_lang::solana_program::system_program::id();
 
         let (treasury_owner, treasyry_owner_bump) =
             find_treasury_owner_address(&treasury_mint, &selling_resource_keypair.pubkey());
@@ -3433,7 +3433,7 @@ mod buy {
 
         let market_keypair = Keypair::new();
 
-        let treasury_mint = anchor_lang::safecoin_program::system_program::id();
+        let treasury_mint = anchor_lang::solana_program::system_program::id();
 
         let (treasury_owner, treasyry_owner_bump) =
             find_treasury_owner_address(&treasury_mint, &selling_resource_keypair.pubkey());
@@ -3757,7 +3757,7 @@ mod buy {
 
         let market_keypair = Keypair::new();
 
-        let treasury_mint = anchor_lang::safecoin_program::system_program::id();
+        let treasury_mint = anchor_lang::solana_program::system_program::id();
 
         let (treasury_owner, treasyry_owner_bump) =
             find_treasury_owner_address(&treasury_mint, &selling_resource_keypair.pubkey());

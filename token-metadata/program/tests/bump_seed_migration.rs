@@ -10,8 +10,8 @@ use lpl_token_metadata::{
     },
     utils::puffed_out_string,
 };
-use safecoin_program::borsh::try_from_slice_unchecked;
-use safecoin_program_test::*;
+use solana_program::borsh::try_from_slice_unchecked;
+use solana_program_test::*;
 use safecoin_sdk::{
     account::{Account, AccountSharedData, WritableAccount},
     signature::{Keypair, Signer},

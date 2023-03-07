@@ -20,7 +20,7 @@ use {
         input_validators::{is_url, is_valid_pubkey, is_valid_signer},
     },
     safecoin_client::rpc_client::RpcClient,
-    safecoin_program::{
+    solana_program::{
         account_info::AccountInfo, borsh::try_from_slice_unchecked, program_pack::Pack,
     },
     safecoin_sdk::{

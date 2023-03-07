@@ -1,7 +1,7 @@
 #![cfg(feature = "test-bpf")]
 pub mod utils;
 
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -21,7 +21,7 @@ mod delegate {
         },
     };
     use num_traits::FromPrimitive;
-    use safecoin_program::{
+    use solana_program::{
         borsh::try_from_slice_unchecked, program_option::COption, program_pack::Pack,
     };
     use safe_token::state::Account;

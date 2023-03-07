@@ -4,7 +4,7 @@ use lpl_utils::{
     assert_signer, create_or_allocate_account_raw,
     token::{get_mint_authority, get_mint_supply},
 };
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, program_error::ProgramError,
     pubkey::Pubkey,
 };
@@ -188,7 +188,7 @@ pub fn extract_edition_number_from_deprecated_reservation_list(
                 break;
             }
 
-            if reservation.address == safecoin_program::system_program::id() {
+            if reservation.address == solana_program::system_program::id() {
                 // This is an anchor point in the array...it means we reset our math to
                 // this offset because we may be missing information in between this point and
                 // the points before it.

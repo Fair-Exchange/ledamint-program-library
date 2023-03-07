@@ -5,7 +5,7 @@ use lpl_utils::cmp_pubkeys;
 #[cfg(feature = "serde-feature")]
 use serde::{Deserialize, Serialize};
 use shank::ShankAccount;
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, instruction::AccountMeta, program_error::ProgramError,
     program_option::COption, pubkey::Pubkey,
 };

@@ -5,8 +5,8 @@ use lpl_token_metadata::{
     state::{Key, MasterEditionV2 as ProgramME, MAX_MASTER_EDITION_LEN},
     utils::try_from_slice_checked,
 };
-use safecoin_program::borsh::try_from_slice_unchecked;
-use safecoin_program_test::*;
+use solana_program::borsh::try_from_slice_unchecked;
+use solana_program_test::*;
 use utils::*;
 mod serialization {
 

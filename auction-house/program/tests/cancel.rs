@@ -69,7 +69,7 @@ async fn cancel_listing() {
 
     let accounts = mpl_auction_house::accounts::CancelListingReceipt {
         receipt: listing_receipt,
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);
@@ -293,7 +293,7 @@ async fn auction_cancel_listing_missing_scope_fails() {
 
     let accounts = mpl_auction_house::accounts::CancelListingReceipt {
         receipt: listing_receipt,
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);
@@ -389,7 +389,7 @@ async fn auction_cancel_listing_no_delegate_fails() {
 
     let accounts = mpl_auction_house::accounts::CancelBidReceipt {
         receipt: bid_receipt,
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);
@@ -486,7 +486,7 @@ async fn cancel_bid() {
 
     let accounts = mpl_auction_house::accounts::CancelBidReceipt {
         receipt: bid_receipt,
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);
@@ -714,7 +714,7 @@ async fn auction_cancel_bid_missing_scope_fails() {
 
     let accounts = mpl_auction_house::accounts::CancelBidReceipt {
         receipt: bid_receipt,
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);
@@ -819,7 +819,7 @@ async fn auction_cancel_bid_no_delegate_fails() {
 
     let accounts = mpl_auction_house::accounts::CancelBidReceipt {
         receipt: bid_receipt,
-        system_program: safecoin_program::system_program::id(),
+        system_program: solana_program::system_program::id(),
         instruction: sysvar::instructions::id(),
     }
     .to_account_metas(None);

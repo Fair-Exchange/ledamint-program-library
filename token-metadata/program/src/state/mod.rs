@@ -34,7 +34,7 @@ use num_traits::FromPrimitive;
 pub use programmable::*;
 pub use reservation::*;
 use shank::ShankAccount;
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, entrypoint::ProgramResult, program_error::ProgramError,
     pubkey::Pubkey,
 };

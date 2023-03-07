@@ -1,4 +1,4 @@
-use safecoin_program_test::{BanksClientError, ProgramTestContext};
+use solana_program_test::{BanksClientError, ProgramTestContext};
 use safecoin_sdk::pubkey::Pubkey;
 use safecoin_sdk::signature::Keypair;
 use safecoin_sdk::signer::Signer;

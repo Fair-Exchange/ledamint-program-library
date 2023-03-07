@@ -3,7 +3,7 @@ use crate::state::Fanout;
 use crate::utils::validation::assert_owned_by;
 use anchor_lang::prelude::*;
 
-use safe_token::safecoin_program::program::invoke_signed;
+use safe_token::solana_program::program::invoke_signed;
 
 #[derive(Accounts)]
 pub struct SignMetadata<'info> {

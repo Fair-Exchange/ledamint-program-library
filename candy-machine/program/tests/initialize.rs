@@ -13,8 +13,8 @@ use solana_gateway::{
         get_gatekeeper_address_with_seed, get_gateway_token_address_with_seed, GatewayTokenState,
     },
 };
-use safecoin_program::pubkey;
-use safecoin_program_test::*;
+use solana_program::pubkey;
+use solana_program_test::*;
 use safecoin_sdk::{
     clock::UnixTimestamp,
     pubkey::Pubkey,

@@ -8,7 +8,7 @@ pub use edition_marker::EditionMarker;
 pub use external_price::ExternalPrice;
 pub use master_edition_v2::MasterEditionV2;
 pub use metadata::Metadata;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     account::Account, program_pack::Pack, pubkey::Pubkey, signature::Signer,
     signer::keypair::Keypair, system_instruction, transaction::Transaction,

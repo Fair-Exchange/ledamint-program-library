@@ -1,4 +1,4 @@
-use anchor_lang::{prelude::*, safecoin_program::program::invoke, AnchorDeserialize};
+use anchor_lang::{prelude::*, solana_program::program::invoke, AnchorDeserialize};
 
 use crate::{constants::*, errors::*, utils::*, AuctionHouse, AuthorityScope, *};
 

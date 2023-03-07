@@ -1,5 +1,5 @@
-use anchor_lang::{prelude::*, safecoin_program::program::invoke, AnchorDeserialize};
-use safecoin_program::program_memory::sol_memset;
+use anchor_lang::{prelude::*, solana_program::program::invoke, AnchorDeserialize};
+use solana_program::program_memory::sol_memset;
 
 use crate::{constants::*, errors::*, utils::*, AuctionHouse, AuthorityScope, *};
 

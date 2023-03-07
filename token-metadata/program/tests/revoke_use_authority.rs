@@ -5,7 +5,7 @@ use lpl_token_metadata::{
     pda::find_use_authority_account,
     state::{UseAuthorityRecord, UseMethod, Uses},
 };
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     signature::{Keypair, Signer},
     transaction::Transaction,
@@ -13,7 +13,7 @@ use safecoin_sdk::{
 use utils::*;
 mod revoke_use_authority {
     use lpl_token_metadata::pda::find_program_as_burner_account;
-    use safecoin_program::borsh::try_from_slice_unchecked;
+    use solana_program::borsh::try_from_slice_unchecked;
 
     use super::*;
     #[tokio::test]

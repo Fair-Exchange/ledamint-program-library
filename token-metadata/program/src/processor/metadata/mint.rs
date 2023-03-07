@@ -1,5 +1,5 @@
 use lpl_utils::{assert_signer, cmp_pubkeys};
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo,
     entrypoint::ProgramResult,
     msg,

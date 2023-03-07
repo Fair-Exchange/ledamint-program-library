@@ -12,8 +12,8 @@ mod create_store {
         state::Store,
         utils::{DESCRIPTION_MAX_LEN, NAME_MAX_LEN},
     };
-    use safecoin_program::instruction::Instruction;
-    use safecoin_program_test::*;
+    use solana_program::instruction::Instruction;
+    use solana_program_test::*;
     use safecoin_sdk::commitment_config::CommitmentLevel;
     use safecoin_sdk::transaction::Transaction;
 

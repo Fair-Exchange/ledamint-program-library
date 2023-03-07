@@ -3,10 +3,10 @@ use mpl_nft_packs::{
     instruction::{self, EditPackSetArgs},
     state::PackSet,
 };
-use safecoin_program::{
+use solana_program::{
     instruction::AccountMeta, program_pack::Pack, pubkey::Pubkey, system_instruction,
 };
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     signature::Signer, signer::keypair::Keypair, transaction::Transaction, transport,
 };

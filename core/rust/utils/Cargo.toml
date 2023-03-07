@@ -14,7 +14,7 @@ crate-type = ["lib", "cdylib"]
 path = "src/lib.rs"
 
 [dependencies]
-safecoin-program = { version = "1.15.3", path = "../../../../Safecoin/sdk/program" }
+safecoin-program = { version = "1.14.17", path = "../../../../Safecoin/sdk/program" }
 borsh = "0.9.3"
 arrayref = "0.3.6"
 safe-token = { version = "3.5.0", path = "../../../../safecoin-program-library/token/program",  features = ["no-entrypoint"], optional = true }

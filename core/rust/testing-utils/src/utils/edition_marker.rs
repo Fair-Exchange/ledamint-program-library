@@ -5,12 +5,12 @@ use lpl_token_metadata::{
     instruction::{self, MetadataInstruction, MintNewEditionFromMasterEditionViaTokenArgs},
     state::{EDITION, EDITION_MARKER_BIT_SIZE, PREFIX},
 };
-use safecoin_program::{
+use solana_program::{
     borsh::try_from_slice_unchecked,
     instruction::{AccountMeta, Instruction},
     sysvar,
 };
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     pubkey::Pubkey, signature::Signer, signer::keypair::Keypair, transaction::Transaction,
 };
@@ -225,7 +225,7 @@ impl EditionMarker {
             AccountMeta::new_readonly(context.payer.pubkey(), false),
             AccountMeta::new_readonly(self.metadata_pubkey, false),
             AccountMeta::new_readonly(fake_token_program.pubkey(), false),
-            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
+            AccountMeta::new_readonly(solana_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
         ];
 

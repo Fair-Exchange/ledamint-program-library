@@ -9,8 +9,8 @@ use lpl_token_metadata::{
 };
 use num_traits::FromPrimitive;
 use rooster::instruction::DelegateArgs as RoosterDelegateArgs;
-use safecoin_program::{native_token::LAMPORTS_PER_SAFE, program_pack::Pack, pubkey::Pubkey};
-use safecoin_program_test::*;
+use solana_program::{native_token::LAMPORTS_PER_SAFE, program_pack::Pack, pubkey::Pubkey};
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -26,7 +26,7 @@ mod standard_transfer {
         instruction::{DelegateArgs, TransferArgs},
         state::TokenStandard,
     };
-    use safecoin_program::{
+    use solana_program::{
         native_token::LAMPORTS_PER_SAFE, program_option::COption, program_pack::Pack, pubkey::Pubkey,
     };
     use safe_associated_token_account::get_associated_token_address;
@@ -373,7 +373,7 @@ mod auth_rules_transfer {
         pda::find_token_record_account,
         state::{ProgrammableConfig, TokenDelegateRole, TokenRecord},
     };
-    use safecoin_program::borsh::try_from_slice_unchecked;
+    use solana_program::borsh::try_from_slice_unchecked;
     use safecoin_sdk::transaction::Transaction;
     use safe_associated_token_account::instruction::create_associated_token_account;
 

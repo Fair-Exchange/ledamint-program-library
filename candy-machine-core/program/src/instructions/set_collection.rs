@@ -4,7 +4,7 @@ use lpl_token_metadata::{
     instruction::{approve_collection_authority, revoke_collection_authority},
     state::{Metadata, TokenMetadataAccount},
 };
-use safecoin_program::program::{invoke, invoke_signed};
+use solana_program::program::{invoke, invoke_signed};
 
 use crate::{
     cmp_pubkeys, constants::AUTHORITY_SEED, utils::assert_edition_from_mint, CandyError,

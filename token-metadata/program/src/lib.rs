@@ -25,6 +25,6 @@ pub mod state;
 pub mod utils;
 
 // Export current sdk types for downstream users building with a different sdk version
-pub use safecoin_program;
+pub use solana_program;
 
-safecoin_program::declare_id!("metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5");
+solana_program::declare_id!("metXT2PkoCBucKkvmeQoYDNmncrPXGVCGacwqEHxcM5");

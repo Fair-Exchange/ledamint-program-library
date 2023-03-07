@@ -1,7 +1,7 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 #[cfg(feature = "serde-feature")]
 use serde::{Deserialize, Serialize};
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
 };
@@ -129,7 +129,7 @@ pub enum BurnArgs {
 ///  12.   `[]` Instruction sysvar account
 ///  13.   `[]` SPL Token Program
 impl InstructionBuilder for super::builders::Burn {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let accounts = vec![
             AccountMeta::new(self.authority, true),
             if let Some(collection_metadata) = self.collection_metadata {

@@ -4,7 +4,7 @@ use super::*;
 use crate::math::SafeMath;
 use borsh::{BorshDeserialize, BorshSerialize};
 use shank::ShankAccount;
-use safecoin_program::{
+use solana_program::{
     msg,
     program_error::ProgramError,
     program_pack::{IsInitialized, Pack, Sealed},

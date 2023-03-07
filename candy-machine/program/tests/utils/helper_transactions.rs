@@ -1,11 +1,11 @@
 use anchor_client::safecoin_sdk::{signature::Signer, system_program, sysvar};
 use anchor_lang::*;
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     system_instruction,
 };
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{signature::Keypair, transaction::Transaction};
 
 use mpl_candy_machine::{

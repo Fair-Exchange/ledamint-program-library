@@ -1,7 +1,7 @@
 use lpl_token_metadata::state::{
     MAX_CREATOR_LEN, MAX_CREATOR_LIMIT, MAX_NAME_LENGTH, MAX_SYMBOL_LENGTH, MAX_URI_LENGTH,
 };
-use safecoin_program::pubkey::Pubkey;
+use solana_program::pubkey::Pubkey;
 
 pub const EXPIRE_OFFSET: i64 = 10 * 60;
 pub const PREFIX: &str = "candy_machine";
@@ -20,14 +20,14 @@ pub const COLLECTION_PDA_SIZE: usize = 8 + 32 + 32;
 pub const CONFIG_LINE_SIZE: usize = 4 + MAX_NAME_LENGTH + 4 + MAX_URI_LENGTH;
 
 pub const BLOCK_HASHES: Pubkey =
-    safecoin_program::pubkey!("SysvarRecentB1ockHashes11111111111111111111");
+    solana_program::pubkey!("SysvarRecentB1ockHashes11111111111111111111");
 pub const GUMDROP_ID: Pubkey =
-    safecoin_program::pubkey!("gdrpGjVffourzkdDRrQmySw4aTHr8a3xmQzzxSwFD1a");
+    solana_program::pubkey!("gdrpGjVffourzkdDRrQmySw4aTHr8a3xmQzzxSwFD1a");
 pub const CUPCAKE_ID: Pubkey =
-    safecoin_program::pubkey!("cakeGJxEdGpZ3MJP8sM3QypwzuzZpko1ueonUQgKLPE");
-pub const A_TOKEN: Pubkey = safecoin_program::pubkey!("AToD9iqHSc2fhEP9Jp7UYA6mRjHQ4CTWyzCsw8X3tH7K");
+    solana_program::pubkey!("cakeGJxEdGpZ3MJP8sM3QypwzuzZpko1ueonUQgKLPE");
+pub const A_TOKEN: Pubkey = solana_program::pubkey!("AToD9iqHSc2fhEP9Jp7UYA6mRjHQ4CTWyzCsw8X3tH7K");
 pub const COMPUTE_BUDGET: Pubkey =
-    safecoin_program::pubkey!("ComputeBudget111111111111111111111111111111");
+    solana_program::pubkey!("ComputeBudget111111111111111111111111111111");
 
 pub const CONFIG_ARRAY_START: usize = 8 + // key
     32 + // authority

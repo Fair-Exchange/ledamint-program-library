@@ -16,11 +16,11 @@ pub const PROGRAM_VERSION: u8 = 1;
 pub mod entrypoint;
 
 // Export current sdk types for downstream users building with a different sdk version
-pub use safecoin_program;
-use safecoin_program::pubkey::Pubkey;
+pub use solana_program;
+use solana_program::pubkey::Pubkey;
 use state::{PackCard, PackConfig, PackVoucher, ProvingProcess, PREFIX};
 
-safecoin_program::declare_id!("packFeFNZzMfD9aVWL7QbGz1WcU7R9zpf6pvNsw2BLu");
+solana_program::declare_id!("packFeFNZzMfD9aVWL7QbGz1WcU7R9zpf6pvNsw2BLu");
 
 /// Default precision
 pub const PRECISION: u128 = 1000000000;

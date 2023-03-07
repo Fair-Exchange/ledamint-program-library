@@ -7,7 +7,7 @@ use lpl_token_metadata::{
     },
     state::{Metadata, TokenMetadataAccount},
 };
-use safecoin_program::{program::invoke_signed, sysvar};
+use solana_program::{program::invoke_signed, sysvar};
 
 use crate::{
     constants::{AUTHORITY_SEED, EMPTY_STR, HIDDEN_SECTION, NULL_STRING},

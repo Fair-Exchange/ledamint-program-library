@@ -13,7 +13,7 @@ use mpl_auction_house::{
     AuctionHouse,
 };
 
-use safecoin_program::{clock::UnixTimestamp, program::invoke_signed};
+use solana_program::{clock::UnixTimestamp, program::invoke_signed};
 
 /// Accounts for the [`sell_with_auctioneer` handler](auction_house/fn.sell_with_auctioneer.html).
 #[derive(Accounts, Clone)]
@@ -159,7 +159,7 @@ pub fn auctioneer_sell<'info>(
         token_size,
     };
 
-    let ix = safecoin_program::instruction::Instruction {
+    let ix = solana_program::instruction::Instruction {
         program_id: cpi_program.key(),
         accounts: cpi_accounts
             .to_account_metas(None)

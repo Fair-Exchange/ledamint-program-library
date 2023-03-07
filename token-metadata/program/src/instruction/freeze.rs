@@ -1,5 +1,5 @@
 use borsh::BorshSerialize;
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
 };

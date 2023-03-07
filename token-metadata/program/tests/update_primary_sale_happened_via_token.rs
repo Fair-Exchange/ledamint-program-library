@@ -8,7 +8,7 @@ use lpl_token_metadata::{
     utils::puffed_out_string,
 };
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},

@@ -7,8 +7,8 @@ use mpl_nft_packs::{
     state::{AccountType, PackDistributionType},
 };
 use num_traits::FromPrimitive;
-use safecoin_program::instruction::InstructionError;
-use safecoin_program_test::*;
+use solana_program::instruction::InstructionError;
+use solana_program_test::*;
 use safecoin_sdk::{
     signature::Keypair, signer::Signer, transaction::TransactionError, transport::TransportError,
 };

@@ -11,7 +11,7 @@ pub use mpl_testing_utils::{
 pub use safe_associated_token_account::get_associated_token_address;
 pub use safe_token;
 
-pub use safecoin_program_test::*;
+pub use solana_program_test::*;
 pub use safecoin_sdk::{
     instruction::{Instruction, InstructionError},
     signature::{Keypair, Signer},

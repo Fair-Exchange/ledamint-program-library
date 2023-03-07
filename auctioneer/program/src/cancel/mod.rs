@@ -8,7 +8,7 @@ use mpl_auction_house::{
     program::AuctionHouse as AuctionHouseProgram,
     AuctionHouse,
 };
-use safecoin_program::program::invoke_signed;
+use solana_program::program::invoke_signed;
 
 use crate::{constants::*, errors::*, sell::config::*};
 
@@ -124,7 +124,7 @@ pub fn auctioneer_cancel<'info>(
         token_size,
     };
 
-    let ix = safecoin_program::instruction::Instruction {
+    let ix = solana_program::instruction::Instruction {
         program_id: cpi_program.key(),
         accounts: cpi_accounts
             .to_account_metas(None)

@@ -15,8 +15,8 @@ mod save_primary_metadata_creators {
         accounts as mpl_fixed_price_sale_accounts, instruction as mpl_fixed_price_sale_instruction,
         state::PrimaryMetadataCreators,
     };
-    use safecoin_program::instruction::Instruction;
-    use safecoin_program_test::*;
+    use solana_program::instruction::Instruction;
+    use solana_program_test::*;
     use safecoin_sdk::{commitment_config::CommitmentLevel, transaction::Transaction};
 
     #[tokio::test]

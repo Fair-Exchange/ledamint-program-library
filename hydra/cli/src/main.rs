@@ -1,5 +1,5 @@
 use crate::cli_api::init_api;
-use anchor_client::anchor_lang::safecoin_program::example_mocks::safecoin_sdk::signature::Keypair;
+use anchor_client::anchor_lang::solana_program::example_mocks::safecoin_sdk::signature::Keypair;
 use anchor_client::anchor_lang::AccountDeserialize;
 use anchor_client::safecoin_client::client_error::ClientError;
 use anchor_client::safecoin_client::rpc_client::RpcClient;

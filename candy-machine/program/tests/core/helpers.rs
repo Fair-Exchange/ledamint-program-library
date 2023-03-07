@@ -1,4 +1,4 @@
-use safecoin_program_test::{BanksClientError, ProgramTestContext};
+use solana_program_test::{BanksClientError, ProgramTestContext};
 use safecoin_sdk::{
     account::Account,
     commitment_config::CommitmentLevel,

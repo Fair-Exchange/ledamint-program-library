@@ -2,7 +2,7 @@
 pub mod utils;
 
 use num_traits::FromPrimitive;
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::{instruction::InstructionError, signer::Signer, transaction::TransactionError};
 use utils::*;
 
@@ -11,7 +11,7 @@ mod burn_edition_nft {
         error::MetadataError,
         state::{MasterEditionV2 as ProgramMasterEdition, TokenMetadataAccount},
     };
-    use safecoin_program::pubkey::Pubkey;
+    use solana_program::pubkey::Pubkey;
     use safecoin_sdk::signature::Keypair;
     use safe_associated_token_account::get_associated_token_address;
 

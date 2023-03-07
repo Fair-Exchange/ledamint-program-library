@@ -196,17 +196,17 @@ pub fn account_context_derive(input: TokenStream) -> TokenStream {
 ///
 /// ```ignore
 /// pub struct MyAccount<'a> {
-///     my_first_account: safecoin_program::account_info::AccountInfo<'a>,
-///     my_second_optional_account: Option<safecoin_program::account_info::AccountInfo<'a>>,
+///     my_first_account: solana_program::account_info::AccountInfo<'a>,
+///     my_second_optional_account: Option<solana_program::account_info::AccountInfo<'a>>,
 ///     ..
 /// }
 /// impl<'a> MyAccount<'a> {
 ///     pub fn to_context(
-///         accounts: &'a [safecoin_program::account_info::AccountInfo<'a>]
-///     ) -> Result<Context<'a, Self>, safecoin_program::sysvar::slot_history::ProgramError> {
+///         accounts: &'a [solana_program::account_info::AccountInfo<'a>]
+///     ) -> Result<Context<'a, Self>, solana_program::sysvar::slot_history::ProgramError> {
 ///         let account_info_iter = &mut accounts.iter();
 ///
-///         let my_first_account = safecoin_program::account_info::next_account_info(account_info_iter)?;
+///         let my_first_account = solana_program::account_info::next_account_info(account_info_iter)?;
 ///
 ///         ..
 ///
@@ -227,11 +227,11 @@ fn generate_accounts(variants: &[Variant]) -> TokenStream {
             let account_name = syn::parse_str::<syn::Ident>(format!("{}_info", &account.name).as_str()).unwrap();
             if account.optional {
                 quote! {
-                    pub #account_name: Option<&'a safecoin_program::account_info::AccountInfo<'a>>
+                    pub #account_name: Option<&'a solana_program::account_info::AccountInfo<'a>>
                 }
             } else {
                 quote! {
-                    pub #account_name:&'a safecoin_program::account_info::AccountInfo<'a>
+                    pub #account_name:&'a solana_program::account_info::AccountInfo<'a>
                 }
             }
         });
@@ -244,7 +244,7 @@ fn generate_accounts(variants: &[Variant]) -> TokenStream {
                 }
             } else {
                 quote! {
-                    let #account_name = safecoin_program::account_info::next_account_info(account_info_iter)?;
+                    let #account_name = solana_program::account_info::next_account_info(account_info_iter)?;
                 }
             }
         });
@@ -254,7 +254,7 @@ fn generate_accounts(variants: &[Variant]) -> TokenStream {
                 #(#struct_fields,)*
             }
             impl<'a> #name<'a> {
-                pub fn to_context(accounts: &'a [safecoin_program::account_info::AccountInfo<'a>]) -> Result<Context<'a, Self>, safecoin_program::sysvar::slot_history::ProgramError> {
+                pub fn to_context(accounts: &'a [solana_program::account_info::AccountInfo<'a>]) -> Result<Context<'a, Self>, solana_program::sysvar::slot_history::ProgramError> {
                     let account_info_iter = &mut accounts.iter();
 
                     #(#impl_fields)*
@@ -281,7 +281,7 @@ fn generate_builders(variants: &[Variant]) -> TokenStream {
     let mut default_pubkeys = HashMap::new();
     default_pubkeys.insert(
         "system_program".to_string(),
-        syn::parse_str::<syn::ExprPath>("safecoin_program::system_program::ID").unwrap(),
+        syn::parse_str::<syn::ExprPath>("solana_program::system_program::ID").unwrap(),
     );
     default_pubkeys.insert(
         "safe_token_program".to_string(),
@@ -293,7 +293,7 @@ fn generate_builders(variants: &[Variant]) -> TokenStream {
     );
     default_pubkeys.insert(
         "sysvar_instructions".to_string(),
-        syn::parse_str::<syn::ExprPath>("safecoin_program::sysvar::instructions::ID").unwrap(),
+        syn::parse_str::<syn::ExprPath>("solana_program::sysvar::instructions::ID").unwrap(),
     );
     default_pubkeys.insert(
         "authorization_rules_program".to_string(),
@@ -312,11 +312,11 @@ fn generate_builders(variants: &[Variant]) -> TokenStream {
             let account_name = syn::parse_str::<syn::Ident>(&account.name).unwrap();
             if account.optional {
                 quote! {
-                    pub #account_name: Option<safecoin_program::pubkey::Pubkey>
+                    pub #account_name: Option<solana_program::pubkey::Pubkey>
                 }
             } else {
                 quote! {
-                    pub #account_name: safecoin_program::pubkey::Pubkey
+                    pub #account_name: solana_program::pubkey::Pubkey
                 }
             }
         });
@@ -344,7 +344,7 @@ fn generate_builders(variants: &[Variant]) -> TokenStream {
         let builder_accounts = variant.accounts.iter().map(|account| {
             let account_name = syn::parse_str::<syn::Ident>(&account.name).unwrap();
             quote! {
-                pub #account_name: Option<safecoin_program::pubkey::Pubkey>
+                pub #account_name: Option<solana_program::pubkey::Pubkey>
             }
         });
 
@@ -384,7 +384,7 @@ fn generate_builders(variants: &[Variant]) -> TokenStream {
         let builder_accounts_methods = variant.accounts.iter().map(|account| {
             let account_name = syn::parse_str::<syn::Ident>(&account.name).unwrap();
             quote! {
-                pub fn #account_name(&mut self, #account_name: safecoin_program::pubkey::Pubkey) -> &mut Self {
+                pub fn #account_name(&mut self, #account_name: solana_program::pubkey::Pubkey) -> &mut Self {
                     self.#account_name = Some(#account_name);
                     self
                 }

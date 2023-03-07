@@ -6,9 +6,9 @@ use anchor_client::safecoin_sdk::{
 };
 use mpl_testing_utils::assert_error;
 use lpl_token_metadata::state::Collection;
-use safecoin_program::instruction::InstructionError;
-use safecoin_program::{clock::Clock, system_instruction};
-use safecoin_program_test::*;
+use solana_program::instruction::InstructionError;
+use solana_program::{clock::Clock, system_instruction};
+use solana_program_test::*;
 use safecoin_sdk::{
     commitment_config::CommitmentLevel, program_pack::Pack, transaction::Transaction,
 };

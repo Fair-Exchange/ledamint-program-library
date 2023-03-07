@@ -1,5 +1,5 @@
 use borsh::{BorshDeserialize, BorshSerialize};
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
 };
@@ -336,7 +336,7 @@ pub fn create_metadata_accounts_v3(
             AccountMeta::new_readonly(mint_authority, true),
             AccountMeta::new(payer, true),
             AccountMeta::new_readonly(update_authority, update_authority_is_signer),
-            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
+            AccountMeta::new_readonly(solana_program::system_program::id(), false),
         ],
         data: MetadataInstruction::CreateMetadataAccountV3(CreateMetadataAccountArgsV3 {
             data: DataV2 {
@@ -486,7 +486,7 @@ pub fn update_primary_sale_happened_via_token(
 ///   7. `[]` Instructions sysvar account
 ///   8. `[]` SPL Token program
 impl InstructionBuilder for super::builders::Create {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let accounts = vec![
             AccountMeta::new(self.metadata, false),
             // checks whether we have a master edition
@@ -535,7 +535,7 @@ impl InstructionBuilder for super::builders::Create {
 ///   13. `[optional]` Token Authorization Rules Program
 ///   14. `[optional]` Token Authorization Rules account
 impl InstructionBuilder for super::builders::Migrate {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let mut accounts = vec![
             AccountMeta::new(self.metadata, false),
             AccountMeta::new(self.edition, false),
@@ -591,7 +591,7 @@ impl InstructionBuilder for super::builders::Migrate {
 ///   13. `[optional]` Token Authorization Rules program
 ///   14. `[optional]` Token Authorization Rules account
 impl InstructionBuilder for super::builders::Mint {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let mut accounts = vec![
             AccountMeta::new(self.token, false),
             AccountMeta::new_readonly(self.token_owner.unwrap_or(crate::ID), false),
@@ -656,7 +656,7 @@ impl InstructionBuilder for super::builders::Mint {
 ///   15. `[optional]` Token Authorization Rules Program
 ///   16. `[optional]` Token Authorization Rules account
 impl InstructionBuilder for super::builders::Transfer {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let mut accounts = vec![
             AccountMeta::new(self.token, false),
             AccountMeta::new_readonly(self.token_owner, false),
@@ -720,7 +720,7 @@ impl InstructionBuilder for super::builders::Transfer {
 ///   9. `[optional]` Token Authorization Rules Program
 ///   10. `[optional]` Token Authorization Rules account
 impl InstructionBuilder for super::builders::Update {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let mut accounts = vec![
             AccountMeta::new_readonly(self.authority, true),
             if let Some(record) = self.delegate_record {

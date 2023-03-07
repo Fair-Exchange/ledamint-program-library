@@ -5,13 +5,13 @@ use mpl_bubblegum::{
     state::{leaf_schema::LeafSchema, TreeConfig, Voucher, VOUCHER_PREFIX},
     utils::get_asset_id,
 };
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
     rent::Rent,
     system_instruction, system_program, sysvar,
 };
-use safecoin_program_test::BanksClient;
+use solana_program_test::BanksClient;
 use safecoin_sdk::{
     account::Account,
     signature::{Keypair, Signer},

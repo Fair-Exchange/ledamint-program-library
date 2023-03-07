@@ -336,7 +336,7 @@ pub enum ProgrammableConfig {
 #[cfg(test)]
 mod tests {
     use borsh::{BorshDeserialize, BorshSerialize};
-    use safecoin_program::account_info::AccountInfo;
+    use solana_program::account_info::AccountInfo;
     use safecoin_sdk::{signature::Keypair, signer::Signer};
 
     use crate::{

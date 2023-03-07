@@ -4,7 +4,7 @@ use crate::{
 
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{
+    solana_program::{
         program::invoke_signed,
         program_memory::{sol_memcmp, sol_memset},
         program_option::COption,

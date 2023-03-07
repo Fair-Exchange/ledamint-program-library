@@ -4,7 +4,7 @@ use crate::{
     utils::*,
     Withdraw,
 };
-use anchor_lang::{prelude::*, safecoin_program::borsh::try_from_slice_unchecked};
+use anchor_lang::{prelude::*, solana_program::borsh::try_from_slice_unchecked};
 use anchor_spl::{
     associated_token::{self, get_associated_token_address},
     token,

@@ -1,5 +1,5 @@
 use anchor_lang::prelude::*;
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo,
     clock::Clock,
     program::{invoke, invoke_signed},

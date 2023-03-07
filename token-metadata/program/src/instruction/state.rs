@@ -1,7 +1,7 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 #[cfg(feature = "serde-feature")]
 use serde::{Deserialize, Serialize};
-use safecoin_program::instruction::{AccountMeta, Instruction};
+use solana_program::instruction::{AccountMeta, Instruction};
 
 use super::{InstructionBuilder, MetadataInstruction};
 use crate::processor::AuthorizationData;
@@ -44,7 +44,7 @@ pub enum UnlockArgs {
 ///   11. `[optional]` Token Authorization Rules program
 ///   12. `[optional]` Token Authorization Rules account
 impl InstructionBuilder for super::builders::Lock {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let mut accounts = vec![
             AccountMeta::new_readonly(self.authority, true),
             AccountMeta::new_readonly(self.token_owner.unwrap_or(crate::ID), false),
@@ -100,7 +100,7 @@ impl InstructionBuilder for super::builders::Lock {
 ///   11. `[optional]` Token Authorization Rules program
 ///   12. `[optional]` Token Authorization Rules account
 impl InstructionBuilder for super::builders::Unlock {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction {
+    fn instruction(&self) -> solana_program::instruction::Instruction {
         let mut accounts = vec![
             AccountMeta::new_readonly(self.authority, true),
             AccountMeta::new_readonly(self.token_owner.unwrap_or(crate::ID), false),

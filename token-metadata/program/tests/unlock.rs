@@ -1,7 +1,7 @@
 #![cfg(feature = "test-bpf")]
 pub mod utils;
 
-use safecoin_program_test::*;
+use solana_program_test::*;
 use utils::*;
 
 mod utility {
@@ -11,7 +11,7 @@ mod utility {
         pda::find_token_record_account,
         state::{TokenDelegateRole, TokenRecord, TokenStandard, TokenState},
     };
-    use safecoin_program::{borsh::try_from_slice_unchecked, program_pack::Pack, pubkey::Pubkey};
+    use solana_program::{borsh::try_from_slice_unchecked, program_pack::Pack, pubkey::Pubkey};
     use safecoin_sdk::signature::{Keypair, Signer};
     use safe_token::state::Account;
 

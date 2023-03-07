@@ -2,7 +2,7 @@
 #![allow(dead_code)]
 
 use crate::utils::{auto_config, candy_machine_program_test, helpers::test_start, CandyManager};
-use safecoin_program_test::*;
+use solana_program_test::*;
 use safecoin_sdk::signature::{Keypair, Signer};
 
 mod core;

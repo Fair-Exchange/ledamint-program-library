@@ -6,7 +6,7 @@ use crate::{
     state::{CleanUpActions, PackConfig, PackDistributionType, PackSet, PackSetState},
     utils::*,
 };
-use safecoin_program::{
+use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     program_pack::Pack,

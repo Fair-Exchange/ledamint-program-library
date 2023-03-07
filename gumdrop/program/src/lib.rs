@@ -3,7 +3,7 @@
 //! Program for distributing tokens efficiently via uploading a Merkle root.
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{
+    solana_program::{
         instruction::{AccountMeta, Instruction},
         program::{invoke, invoke_signed},
         system_instruction, sysvar,
@@ -325,7 +325,7 @@ pub mod gumdrop {
 
         // Verify the merkle proof.
         let node = if resource_nonce.is_empty() {
-            safecoin_program::keccak::hashv(&[
+            solana_program::keccak::hashv(&[
                 &[0x00],
                 &index.to_le_bytes(),
                 &claimant_secret.to_bytes(),
@@ -333,7 +333,7 @@ pub mod gumdrop {
                 &amount.to_le_bytes(),
             ])
         } else {
-            safecoin_program::keccak::hashv(&[
+            solana_program::keccak::hashv(&[
                 &[0x00],
                 &index.to_le_bytes(),
                 &claimant_secret.to_bytes(),
@@ -390,7 +390,7 @@ pub mod gumdrop {
         )?;
 
         // Verify the merkle proof.
-        let node = safecoin_program::keccak::hashv(&[
+        let node = solana_program::keccak::hashv(&[
             &[0x00],
             &index.to_le_bytes(),
             &claimant_secret.to_bytes(),
@@ -466,7 +466,7 @@ pub mod gumdrop {
         // TODO: this is a bit weird but we verify elsewhere that the candy_machine_config is
         // actually a config thing and not a mint
         // Verify the merkle proof.
-        let node = safecoin_program::keccak::hashv(&[
+        let node = solana_program::keccak::hashv(&[
             &[0x00],
             &index.to_le_bytes(),
             &claimant_secret.to_bytes(),
@@ -544,7 +544,7 @@ pub mod gumdrop {
         );
 
         // TODO: master_edition or something else? should we has the edition here also?
-        let node = safecoin_program::keccak::hashv(&[
+        let node = solana_program::keccak::hashv(&[
             &[0x00],
             &index.to_le_bytes(),
             &claimant_secret.to_bytes(),

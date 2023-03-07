@@ -43,7 +43,7 @@ impl TokenMetadataAccount for Edition {
 #[cfg(test)]
 mod tests {
     use borsh::BorshSerialize;
-    use safecoin_program::account_info::AccountInfo;
+    use solana_program::account_info::AccountInfo;
     use safecoin_sdk::{signature::Keypair, signer::Signer};
 
     use crate::{

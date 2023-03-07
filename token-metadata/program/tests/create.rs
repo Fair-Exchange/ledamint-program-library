@@ -7,8 +7,8 @@ use lpl_token_metadata::{
     utils::puffed_out_string,
 };
 use num_traits::FromPrimitive;
-use safecoin_program::pubkey::Pubkey;
-use safecoin_program_test::*;
+use solana_program::pubkey::Pubkey;
+use solana_program_test::*;
 use safecoin_sdk::{
     instruction::InstructionError,
     signature::{Keypair, Signer},
@@ -27,7 +27,7 @@ mod create {
             AssetData, Metadata, PrintSupply, ProgrammableConfig, TokenStandard, EDITION, PREFIX,
         },
     };
-    use safecoin_program::borsh::try_from_slice_unchecked;
+    use solana_program::borsh::try_from_slice_unchecked;
 
     use super::*;
 

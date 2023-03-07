@@ -3,8 +3,8 @@
 #![cfg(all(target_arch = "bpf", not(feature = "no-entrypoint")))]
 
 use crate::{error::NFTPacksError, processor::Processor};
-use safecoin_program::program_error::PrintProgramError;
-use safecoin_program::{
+use solana_program::program_error::PrintProgramError;
+use solana_program::{
     account_info::AccountInfo, entrypoint, entrypoint::ProgramResult, pubkey::Pubkey,
 };
 

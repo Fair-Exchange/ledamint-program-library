@@ -1,7 +1,7 @@
 use crate::{error::BubblegumError, state::metaplex_adapter::MetadataArgs, ASSET_PREFIX};
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{program_memory::sol_memcmp, pubkey::PUBKEY_BYTES},
+    solana_program::{program_memory::sol_memcmp, pubkey::PUBKEY_BYTES},
 };
 use spl_account_compression::Node;
 

@@ -19,8 +19,8 @@ use lpl_token_metadata::{
         TokenMetadataAccount, TokenRecord, TokenStandard, EDITION, EDITION_MARKER_BIT_SIZE, PREFIX,
     },
 };
-use safecoin_program::{borsh::try_from_slice_unchecked, pubkey::Pubkey};
-use safecoin_program_test::{BanksClientError, ProgramTestContext};
+use solana_program::{borsh::try_from_slice_unchecked, pubkey::Pubkey};
+use solana_program_test::{BanksClientError, ProgramTestContext};
 use safecoin_sdk::{
     compute_budget::ComputeBudgetInstruction,
     signature::{Keypair, Signer},

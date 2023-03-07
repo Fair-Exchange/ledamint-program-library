@@ -1,4 +1,4 @@
-use safecoin_program::{account_info::AccountInfo, entrypoint::ProgramResult, pubkey::Pubkey};
+use solana_program::{account_info::AccountInfo, entrypoint::ProgramResult, pubkey::Pubkey};
 
 use crate::{error::MetadataError, instruction::VerifyArgs};
 

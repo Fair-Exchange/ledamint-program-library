@@ -26,7 +26,7 @@ use crate::{
 
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{program::invoke_signed, system_instruction},
+    solana_program::{program::invoke_signed, system_instruction},
     AnchorDeserialize, AnchorSerialize,
 };
 use anchor_spl::{

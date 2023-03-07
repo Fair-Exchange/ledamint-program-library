@@ -1,7 +1,7 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 #[cfg(feature = "serde-feature")]
 use serde::{Deserialize, Serialize};
-use safecoin_program::{
+use solana_program::{
     instruction::{AccountMeta, Instruction},
     pubkey::Pubkey,
 };
@@ -41,7 +41,7 @@ pub fn approve_collection_authority(
             AccountMeta::new(payer, true),
             AccountMeta::new_readonly(metadata, false),
             AccountMeta::new_readonly(mint, false),
-            AccountMeta::new_readonly(safecoin_program::system_program::id(), false),
+            AccountMeta::new_readonly(solana_program::system_program::id(), false),
         ],
         data: MetadataInstruction::ApproveCollectionAuthority
             .try_to_vec()

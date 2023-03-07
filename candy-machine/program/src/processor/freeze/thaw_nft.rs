@@ -4,7 +4,7 @@ use anchor_lang::{
 };
 use anchor_spl::token::{Mint, Token, TokenAccount};
 use lpl_token_metadata::instruction::thaw_delegated_account;
-use safecoin_program::program::{invoke, invoke_signed};
+use solana_program::program::{invoke, invoke_signed};
 use safe_token::instruction::revoke;
 
 use crate::{cmp_pubkeys, CandyError, CandyMachine, FreezePDA};

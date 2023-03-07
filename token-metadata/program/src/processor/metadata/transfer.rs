@@ -2,7 +2,7 @@ use std::fmt::Display;
 
 use lpl_token_auth_rules::processor::cmp_pubkeys;
 use lpl_utils::{assert_signer, token::TokenTransferParams};
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo,
     entrypoint::ProgramResult,
     msg,

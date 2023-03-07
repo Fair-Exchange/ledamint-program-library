@@ -1,5 +1,5 @@
 use crate::state::BubblegumEventType;
-use anchor_lang::{prelude::*, safecoin_program::keccak};
+use anchor_lang::{prelude::*, solana_program::keccak};
 use borsh::{BorshDeserialize, BorshSerialize};
 use spl_account_compression::Node;
 

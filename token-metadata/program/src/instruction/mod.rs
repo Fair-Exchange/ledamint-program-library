@@ -23,7 +23,7 @@ use lpl_token_metadata_context_derive::AccountContext;
 #[cfg(feature = "serde-feature")]
 use serde::{Deserialize, Serialize};
 use shank::ShankInstruction;
-use safecoin_program::account_info::AccountInfo;
+use solana_program::account_info::AccountInfo;
 pub use state::*;
 pub use uses::*;
 
@@ -775,5 +775,5 @@ pub struct Context<'a, T> {
 }
 
 pub trait InstructionBuilder {
-    fn instruction(&self) -> safecoin_program::instruction::Instruction;
+    fn instruction(&self) -> solana_program::instruction::Instruction;
 }

@@ -1,14 +1,14 @@
 #![cfg(feature = "test-bpf")]
 pub mod utils;
 
-use safecoin_program::borsh::try_from_slice_unchecked;
-use safecoin_program_test::*;
+use solana_program::borsh::try_from_slice_unchecked;
+use solana_program_test::*;
 use safecoin_sdk::{signer::Signer, transaction::Transaction};
 use utils::*;
 
 mod escrow {
     use lpl_token_metadata::{escrow::find_escrow_account, state::EscrowAuthority};
-    use safecoin_program::program_pack::Pack;
+    use solana_program::program_pack::Pack;
 
     use super::*;
 

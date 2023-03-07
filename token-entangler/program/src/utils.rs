@@ -1,7 +1,7 @@
 use crate::ErrorCode;
 use anchor_lang::{
     prelude::*,
-    safecoin_program::{
+    solana_program::{
         program::{invoke, invoke_signed},
         program_memory::sol_memcmp,
         program_pack::{IsInitialized, Pack},
@@ -351,7 +351,7 @@ mod tests {
     use crate::utils::get_mint_details;
     use anchor_lang::{
         prelude::{AccountInfo, Pubkey},
-        safecoin_program::{program_option::COption, program_pack::Pack},
+        solana_program::{program_option::COption, program_pack::Pack},
     };
     use safe_token::state::Mint;
 

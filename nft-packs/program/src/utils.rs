@@ -2,7 +2,7 @@
 
 use crate::state::ProvingProcess;
 use borsh::BorshSerialize;
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo,
     clock::Clock,
     entrypoint::ProgramResult,

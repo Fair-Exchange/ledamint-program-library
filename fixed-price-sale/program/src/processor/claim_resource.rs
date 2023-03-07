@@ -4,7 +4,7 @@ use crate::{
     utils::*,
     ClaimResource,
 };
-use anchor_lang::{prelude::*, safecoin_program::program_pack::Pack, system_program::System};
+use anchor_lang::{prelude::*, solana_program::program_pack::Pack, system_program::System};
 use anchor_spl::token;
 use lpl_token_metadata::state::TokenMetadataAccount;
 

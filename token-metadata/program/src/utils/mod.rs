@@ -17,7 +17,7 @@ pub use lpl_utils::{
     },
 };
 pub use programmable_asset::*;
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, borsh::try_from_slice_unchecked, entrypoint::ProgramResult,
     program::invoke_signed, program_error::ProgramError, pubkey::Pubkey, system_program,
 };
@@ -203,7 +203,7 @@ pub fn close_program_account<'a>(
 
 #[cfg(test)]
 mod tests {
-    pub use safecoin_program::pubkey::Pubkey;
+    pub use solana_program::pubkey::Pubkey;
 
     use crate::{
         state::MAX_METADATA_LEN,

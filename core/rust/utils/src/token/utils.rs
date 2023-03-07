@@ -1,5 +1,5 @@
 use arrayref::{array_ref, array_refs};
-use safecoin_program::{
+use solana_program::{
     account_info::AccountInfo, program_error::ProgramError, program_option::COption, pubkey::Pubkey,
 };
 

@@ -1,6 +1,6 @@
 //! State types
 use borsh::{BorshDeserialize, BorshSchema, BorshSerialize};
-use safecoin_program::{program_error::ProgramError, pubkey::Pubkey};
+use solana_program::{program_error::ProgramError, pubkey::Pubkey};
 
 mod pack_card;
 mod pack_config;
